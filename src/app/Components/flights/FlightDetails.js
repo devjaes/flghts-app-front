@@ -6,7 +6,7 @@ import Login from "../../pages/auth/Login";
 import {
   bookFlight,
   changeFlightStatus,
-  checkoutForPayment
+  checkoutForPayment,
 } from "../../crud/flights.crud";
 import { shallowEqual, useSelector } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
@@ -20,19 +20,19 @@ const FlightDetails = ({
   readOnly,
   bookingStatus,
   updateTipsCancel,
-  userType
+  userType,
 }) => {
   const [loadingBooking, setLoadingBooking] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const { isAuthorized, user } = useSelector(
     ({ auth }) => ({
       isAuthorized: auth.user != null,
-      user: auth.user
+      user: auth.user,
     }),
     shallowEqual
   );
   const [loadingButtonStyle, setLoadingButtonStyle] = useState({
-    paddingRight: "1.5rem"
+    paddingRight: "1.5rem",
   });
   const enableLoading = () => {
     setLoadingBooking(true);
@@ -47,7 +47,7 @@ const FlightDetails = ({
     if (isAuthorized) {
       enableLoading();
       bookFlight({ details: flight.details, userId: user._id })
-        .then(res => {
+        .then((res) => {
           console.log("res", res);
           setTimeout(() => {
             disableLoading();
@@ -56,25 +56,25 @@ const FlightDetails = ({
             setResponse({
               success: {
                 show: true,
-                message: res.data.message
+                message: res.data.message,
               },
               error: {
                 show: false,
-                message: ""
-              }
+                message: "",
+              },
             });
           }, 1000);
         })
-        .catch(error => {
+        .catch((error) => {
           setResponse({
             success: {
               show: false,
-              message: ""
+              message: "",
             },
             error: {
               show: true,
-              message: "Could not book Flight at the moment"
-            }
+              message: "Could not book Flight at the moment",
+            },
           });
         });
     } else {
@@ -82,11 +82,11 @@ const FlightDetails = ({
       setShowLogin(true);
     }
   };
-  const handleClickChangeStatus = status => {
+  const handleClickChangeStatus = (status) => {
     if (isAuthorized) {
       enableLoading();
       changeFlightStatus({ flightId: bookingStatus._id, status })
-        .then(res => {
+        .then((res) => {
           console.log("res", res);
           setTimeout(() => {
             disableLoading();
@@ -96,25 +96,25 @@ const FlightDetails = ({
             setResponse({
               success: {
                 show: true,
-                message: `Booking ${status} Successfully`
+                message: `Booking ${status} Successfully`,
               },
               error: {
                 show: false,
-                message: ""
-              }
+                message: "",
+              },
             });
           }, 1000);
         })
-        .catch(error => {
+        .catch((error) => {
           setResponse({
             success: {
               show: false,
-              message: ""
+              message: "",
             },
             error: {
               show: true,
-              message: "Could not book Flight at the moment"
-            }
+              message: "Could not book Flight at the moment",
+            },
           });
         });
     } else {
@@ -126,14 +126,14 @@ const FlightDetails = ({
     setShowLogin(false);
     setShowDetails(true);
   };
-  const makePayment = token => {
+  const makePayment = (token) => {
     console.log("token", token);
     checkoutForPayment({
       token,
       amount: parseInt(flight.details?.price?.total, 10) * 100,
-      flightId: bookingStatus._id
+      flightId: bookingStatus._id,
     })
-      .then(result => {
+      .then((result) => {
         setShowDetails(false);
         setDetails(null);
         if (!result.data.error) {
@@ -141,38 +141,38 @@ const FlightDetails = ({
           setResponse({
             success: {
               show: true,
-              message: `Booking Confirmed Successfully`
+              message: `Booking Confirmed Successfully`,
             },
             error: {
               show: false,
-              message: ""
-            }
+              message: "",
+            },
           });
         } else {
           setResponse({
             success: {
               show: false,
-              message: ""
+              message: "",
             },
             error: {
               show: true,
-              message: result.data.message
-            }
+              message: result.data.message,
+            },
           });
         }
       })
-      .catch(error => {
+      .catch((error) => {
         setShowDetails(false);
         setDetails(null);
         setResponse({
           success: {
             show: false,
-            message: ""
+            message: "",
           },
           error: {
             show: true,
-            message: "Could not make payment at the moment"
-          }
+            message: "Could not make payment at the moment",
+          },
         });
       });
   };
@@ -251,22 +251,22 @@ const FlightDetails = ({
               </tr>
             </thead>
             <tbody>
-              {flight?.details?.travelerPricings.map(tPricing => (
+              {flight?.details?.travelerPricings.map((tPricing) => (
                 <tr>
                   <td>{tPricing.travelerType}</td>
                   <td>{tPricing.fareOption}</td>
                   <td>
-                    {tPricing.fareDetailsBySegment.map(fDetails => (
+                    {tPricing.fareDetailsBySegment.map((fDetails) => (
                       <div>{fDetails.cabin}</div>
                     ))}
                   </td>
                   <td>
-                    {tPricing.fareDetailsBySegment.map(fDetails => (
+                    {tPricing.fareDetailsBySegment.map((fDetails) => (
                       <div>{fDetails.class}</div>
                     ))}
                   </td>
                   <td>
-                    {tPricing.fareDetailsBySegment.map(fDetails => (
+                    {tPricing.fareDetailsBySegment.map((fDetails) => (
                       <div>
                         {fDetails.includedCheckedBags?.weight}-
                         {fDetails.includedCheckedBags?.weightUnit}
@@ -324,7 +324,7 @@ const FlightDetails = ({
               <button
                 className={`btn btn-primary btn-elevate kt-login__btn-primary ${clsx(
                   {
-                    "kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light": loadingBooking
+                    "kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light": loadingBooking,
                   }
                 )}`}
                 style={loadingButtonStyle}
@@ -337,7 +337,7 @@ const FlightDetails = ({
               <button
                 className={`btn btn-primary btn-elevate kt-login__btn-primary ${clsx(
                   {
-                    "kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light": loadingBooking
+                    "kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light": loadingBooking,
                   }
                 )}`}
                 disabled={bookingStatus?.bookingStatus !== "Pending"}
@@ -350,7 +350,7 @@ const FlightDetails = ({
               <StripeCheckout
                 token={makePayment}
                 stripeKey={
-                  "pk_test_51HLtFDCzlUjqqV4cLqsB8OvMpfcaVDzIhl9HJAzf2trhhw3wEdQrIjR26zvooiOdLS1pqsxdW6xpbped5ObJUSIf0069JxvS7k"
+                  "pk_test_51O2dNEBn1XTEN6aVWW88OgXfTpJ8U0POpDofgmjBHL9ogslBz7bDRdEYktZgiLswCfR97di3rm2Bg0zkS4G5iGpN006goRqDag"
                 }
                 name="PaymentForFlight"
                 amount={parseInt(flight?.details?.price?.total, 10) * 100}
@@ -359,7 +359,7 @@ const FlightDetails = ({
                 <button
                   className={`btn btn-primary btn-elevate kt-login__btn-primary ${clsx(
                     {
-                      "kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light": loadingBooking
+                      "kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light": loadingBooking,
                     }
                   )}`}
                   disabled={bookingStatus?.bookingStatus !== "Approved"}
@@ -374,7 +374,7 @@ const FlightDetails = ({
             <button
               className={`btn btn-primary btn-elevate kt-login__btn-primary ${clsx(
                 {
-                  "kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light": loadingBooking
+                  "kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light": loadingBooking,
                 }
               )}`}
               disabled={bookingStatus?.bookingStatus !== "Pending"}
