@@ -12,7 +12,7 @@ const MainFooter = () => {
               <div className="kt-footer__logo">
                 <div className="kt-footer__copyright">
                   {new Date().getFullYear()}&nbsp;&copy;&nbsp;
-                  <Link to="/">Flights System Limited</Link>
+                  <Link to="/">Sistema de vuelos WIF</Link>
                 </div>
               </div>
             </div>

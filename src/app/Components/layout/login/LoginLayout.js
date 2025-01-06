@@ -22,7 +22,7 @@ const LoginLayout = ({ children, heading, isModal }) => {
                   {!isModal && (
                     <Link to="/" className="btn btn-label">
                       {" "}
-                      <i className="fa fa-arrow-left" /> Back
+                      <i className="fa fa-arrow-left" /> Atrás
                     </Link>
                   )}
 
