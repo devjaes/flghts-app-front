@@ -57,7 +57,7 @@ const Admins = ({ currentAdmin }) => {
         }
       })
       .catch(error => {
-        setError({ show: true, message: "Could not delete Job Post" });
+        setError({ show: true, message: "No se pudo eliminar" });
         handleClose();
         closeAlert();
       });
@@ -84,7 +84,7 @@ const Admins = ({ currentAdmin }) => {
             <PortletHeaderToolbar>
               <Link to="/admins/new">
                 <button className="btn btn-label btn-bold btn-sm">
-                  <i className="fa fa-plus" /> New Admin
+                  <i className="fa fa-plus" /> Nuevo admin
                 </button>
               </Link>
             </PortletHeaderToolbar>
@@ -95,19 +95,19 @@ const Admins = ({ currentAdmin }) => {
             <thead>
               <tr>
                 <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>Nombre</th>
+                <th>Villacres</th>
                 <th>Email</th>
-                <th>Address</th>
-                <th>Country</th>
-                <th>Actions</th>
+                <th>Dirección</th>
+                <th>País</th>
+                <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
               {admins.length === 0 ? (
                 <tr>
                   <td colSpan={5} style={{ textAlign: "center" }}>
-                    No Admins Found
+                    No se encontraron admins
                   </td>
                 </tr>
               ) : (
@@ -124,10 +124,10 @@ const Admins = ({ currentAdmin }) => {
                       <td>{admin.firstName}</td>
                       <td>{admin.lastName}</td>
                       <td>{admin.email}</td>
-                      <td>{admin.address || "Not Provided"}</td>
-                      <td>{admin.country || "Not Provided"}</td>
+                      <td>{admin.address || "No propocionado"}</td>
+                      <td>{admin.country || "No proporcionado"}</td>
                       <td>
-                        <Tooltip title="Remove Admin" placement="top">
+                        <Tooltip title="Eliminar admin" placement="top">
                           <span>
                             <button
                               className="btn btn-icon text-danger btn-sm h-auto w-auto"
@@ -155,15 +155,15 @@ const Admins = ({ currentAdmin }) => {
       </Portlet>
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Remove Admin</Modal.Title>
+          <Modal.Title>Eliminar admin</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Are you sure you want to remove this job admin?</Modal.Body>
+        <Modal.Body>Estás seguro que quieres eliminar al admin ?</Modal.Body>
         <Modal.Footer>
           <button className="btn btn-primary btn-sm" onClick={handleClose}>
-            Close
+            Cerrar
           </button>
           <button className="btn btn-danger btn-sm" onClick={confirmDelete}>
-            Remove
+            Eliminar
           </button>
         </Modal.Footer>
       </Modal>

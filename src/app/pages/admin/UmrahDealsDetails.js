@@ -100,7 +100,7 @@ const UmrahDealsDetails = () => {
         setResponse({
           success: {
             show: true,
-            message: `Booking Confirmed Successfully`
+            message: `Reserva confirmada exitosamente`
           },
           error: {
             show: false,
@@ -116,7 +116,7 @@ const UmrahDealsDetails = () => {
           },
           error: {
             show: true,
-            message: "Could not make payment at the moment"
+            message: "No se ha podido hacer el pago en este momento"
           }
         });
       });
@@ -130,7 +130,7 @@ const UmrahDealsDetails = () => {
         setResponse({
           success: {
             show: true,
-            message: `Package Deleted Successfully!`
+            message: `Paquete eliminado con éxito!`
           },
           error: {
             show: false,
@@ -149,7 +149,7 @@ const UmrahDealsDetails = () => {
           },
           error: {
             show: true,
-            message: "Could not delete package"
+            message: "No se puede eliminar el paquete"
           }
         });
       });
@@ -182,7 +182,7 @@ const UmrahDealsDetails = () => {
                       // style={loadingButtonStyle}
                       // onClick={() => handleClickChangeStatus("Canceled")}
                     >
-                      Book Now
+                      Reserva ahora
                     </button>
                   </StripeCheckout>
                 ) : (
@@ -191,7 +191,7 @@ const UmrahDealsDetails = () => {
                     // style={loadingButtonStyle}
                     onClick={() => setDeleteConfirm(true)}
                   >
-                    Delete Package
+                    Eliminar paquete
                   </button>
                 )
               ) : (
@@ -199,7 +199,7 @@ const UmrahDealsDetails = () => {
                   className={`btn btn-primary btn-elevate kt-login__btn-primary `}
                   onClick={() => setShowLogin(true)}
                 >
-                  Book Now
+                  Reserva ahora
                 </button>
               )}
             </PortletHeaderToolbar>
@@ -246,20 +246,20 @@ const UmrahDealsDetails = () => {
           )}
           <div className="mt-3">
             <h6>
-              Number of People:{" "}
+              Número de personas:{" "}
               <span className="font-weight-bold">
                 {" "}
                 {deals?.details.packages.numberOfPeople}
               </span>
             </h6>
             <h6>
-              Number of Days:{" "}
+              Número de días:{" "}
               <span className="font-weight-bold">
                 {deals?.details.packages.numberOfDays}
               </span>
             </h6>
             <h6>
-              Total Price:{" "}
+              Precio total:{" "}
               <span className="font-weight-bold">
                 PKR {deals?.details.packages.price}
               </span>
@@ -267,15 +267,15 @@ const UmrahDealsDetails = () => {
           </div>
           {user && user.role === "2" && (
             <div className="mt-3">
-              <h4>Booked By:</h4>
+              <h4>Reservado por:</h4>
               <Table responsive>
                 <thead>
                   <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
                     <th>Email</th>
-                    <th>Mobile No</th>
-                    <th>Passport No</th>
+                    <th>Número de teléfono</th>
+                    <th>Número de pasaporte</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -296,15 +296,15 @@ const UmrahDealsDetails = () => {
       </Portlet>
       <Modal show={deleteConfirm} onHide={() => setDeleteConfirm(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Confirm</Modal.Title>
+          <Modal.Title>Confirmar</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Are you sure you want to delete this package?</Modal.Body>
+        <Modal.Body>Estás segur de que quieres eliminar este paquete?</Modal.Body>
         <Modal.Footer>
           <button
             className="btn btn-danger btn-outlined"
             onClick={handleDeletePackage}
           >
-            Delete Now
+            Eliminar ahora
           </button>
         </Modal.Footer>
       </Modal>

@@ -38,7 +38,7 @@ const CreateAdmin = () => {
       <Alert show={error.show} variant="danger">{error.message}</Alert>
       <Portlet className="kt-portlet--height-fluid-half kt-portlet--border-bottom-brand">
         <PortletHeader
-          title='Create Admin'
+          title='Crear Admin'
         />
         <PortletBody>
           <div className="row container">
@@ -72,7 +72,7 @@ const CreateAdmin = () => {
                   })
                   .catch((error) => {
                     disableLoading();
-                    setError({show: true, message: 'Could not create lawyer!'})
+                    setError({show: true, message: 'No se pudo crear!'})
                     setSubmitting(false)
                     closeAlert()
                   });
@@ -84,25 +84,25 @@ const CreateAdmin = () => {
                     <label className="col-xl-3" />
                     <div className="col-lg-9 col-xl-6">
                       <h3 className="kt-section__title kt-section__title-sm">
-                        Provide Admin Details here:
+                        Proporciona detalles del admin aqui:
                       </h3>
                     </div>
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      First Name
+                      Nombre
                     </label>
                     <div className="col-10">
-                      <Field className="form-control" name='firstName' placeholder="First Name"/>
+                      <Field className="form-control" name='firstName' placeholder="Nombre"/>
                       <ErrorMessage name='firstName' render={formErrorMessage}/>
                     </div>
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Last Name
+                      Apellido
                     </label>
                     <div className="col-10">
-                      <Field className="form-control" name="lastName" placeholder="Last Name"/>
+                      <Field className="form-control" name="lastName" placeholder="Apellido"/>
                       <ErrorMessage name='lastName' render={formErrorMessage}/>
                     </div>
                   </div>
@@ -117,7 +117,7 @@ const CreateAdmin = () => {
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Mobile No
+                      Número de teléfono
                     </label>
                     <div className="col-10">
                       <Field className="form-control" name="mobileNo" placeholder="03XXXXXXXXX"/>
@@ -126,16 +126,16 @@ const CreateAdmin = () => {
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Address
+                      Dirección
                     </label>
                     <div className="col-10">
-                      <Field className="form-control" name="address" placeholder="Address"/>
+                      <Field className="form-control" name="address" placeholder="Dirección"/>
                       <ErrorMessage name='address' render={formErrorMessage}/>
                     </div>
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Country
+                      País
                     </label>
                     <div className="col-10">
                       <InputCountry/>
@@ -155,7 +155,7 @@ const CreateAdmin = () => {
                         style={loadingButtonStyle}
                         disabled={isSubmitting}
                       >
-                        Create Admin
+                        Crear admin
                       </button>
                     </div>
                   </div>

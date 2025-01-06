@@ -62,7 +62,7 @@ const UmrahDeals = () => {
     <div className="pb-5">
       <Portlet className="kt-portlet--height-fluid-half kt-portlet--border-bottom-brand">
         <PortletHeader
-          title="Umrah Deals"
+          title="Ofertas de Umrah"
           toolbar={
             <PortletHeaderToolbar>
               {user?.role === "1" && (
@@ -80,12 +80,12 @@ const UmrahDeals = () => {
                     <DropdownItem
                       onClick={() => setFilters({ ...filters, booking: false })}
                     >
-                      All Packages
+                      Todos los paquetes
                     </DropdownItem>
                     <DropdownItem
                       onClick={() => setFilters({ ...filters, booking: true })}
                     >
-                      My Bookings
+                      Mis reservas
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
@@ -93,7 +93,7 @@ const UmrahDeals = () => {
 
               {user?.role === "2" && (
                 <Link to="/umrah-deals/create" className="btn btn-label btn-sm">
-                  <i className="fa fa-plus" /> Add New Package
+                  <i className="fa fa-plus" /> Agregar nuevo paquete
                 </Link>
               )}
             </PortletHeaderToolbar>
@@ -112,7 +112,7 @@ const UmrahDeals = () => {
               className="d-flex justify-content-center align-items-center"
               style={{ height: 100, fontSize: 20 }}
             >
-              No Package Found!
+              No se encontró ningún paquete!
             </div>
           ) : (
             <div className="row">

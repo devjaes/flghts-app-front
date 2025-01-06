@@ -85,12 +85,12 @@ const WorldTour = () => {
                     <DropdownItem
                       onClick={() => setFilters({ ...filters, myTours: false })}
                     >
-                      All Tours
+                      Todas las giras
                     </DropdownItem>
                     <DropdownItem
                       onClick={() => setFilters({ ...filters, myTours: true })}
                     >
-                      My Tours
+                      Mis giras
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
@@ -118,7 +118,7 @@ const WorldTour = () => {
               </Dropdown>
               {user?.role === "2" && (
                 <Link to="/world-tour/create" className="btn btn-label btn-sm">
-                  <i className="fa fa-plus" /> Add New Tour
+                  <i className="fa fa-plus" /> Agregar nueva gira
                 </Link>
               )}
             </PortletHeaderToolbar>
@@ -137,7 +137,7 @@ const WorldTour = () => {
               className="d-flex justify-content-center align-items-center"
               style={{ height: 100, fontSize: 20 }}
             >
-              No deal Found!
+              No se encontraron paquetes!
             </div>
           ) : (
             <Portlet className="kt-portlet--height-fluid-half kt-portlet--border-bottom-brand">
@@ -149,7 +149,7 @@ const WorldTour = () => {
                       className="d-flex justify-content-center align-items-center w-100"
                       style={{ height: 100, fontSize: 20 }}
                     >
-                      No Tour Found!
+                      No se encontraron giras!
                     </div>
                   ) : (
                     currentDeal?.map(pack => (
@@ -170,7 +170,7 @@ const WorldTour = () => {
                             />
                           </div>
                           <h4 className="p-3 text-center world-tour__title">
-                            {pack.title} Tour Package
+                            {pack.title} Paquete de gira
                           </h4>
                         </div>
                       </Link>

@@ -45,7 +45,7 @@ const CreateWorldTour = () => {
     setFieldValue("packageImage", acceptedFiles[0]);
   };
   const onDropReject = files => {
-    setError({ show: true, message: "Could not accept this file" });
+    setError({ show: true, message: "No se acepta este archivo" });
     setTimeout(() => {
       setError({ show: false, message: "" });
     }, 2000);
@@ -56,7 +56,7 @@ const CreateWorldTour = () => {
   return (
     <div className="pb-5">
       <Portlet className="kt-portlet--height-fluid-half kt-portlet--border-bottom-brand">
-        <PortletHeader title="Create World Tour" />
+        <PortletHeader title="Crear gira mundial" />
         <PortletBody>
           <Alert show={success.show} variant="success">
             {success.message}
@@ -100,7 +100,7 @@ const CreateWorldTour = () => {
                   })
                   .catch(error => {
                     disableLoading();
-                    setError({ show: true, message: "Could not create Tour!" });
+                    setError({ show: true, message: "No se pudo crear la gira!" });
                     setSubmitting(false);
                     closeAlert();
                   });
@@ -118,12 +118,12 @@ const CreateWorldTour = () => {
                     <label className="col-xl-3" />
                     <div className="col-lg-9 col-xl-6">
                       <h3 className="kt-section__title kt-section__title-sm">
-                        Provide Tour Details here:
+                        Proprociona detalles de la gra aquí:
                       </h3>
                     </div>
                   </div>
                   <div className="form-group row">
-                    <label className="col-2 col-form-label">Country</label>
+                    <label className="col-2 col-form-label">País</label>
                     <div className="col-10">
                       <InputCountry />
                       <ErrorMessage name="country" render={formErrorMessage} />
@@ -131,13 +131,13 @@ const CreateWorldTour = () => {
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Package Title
+                      Título del paquete
                     </label>
                     <div className="col-10">
                       <Field
                         className="form-control"
                         name="packageTitle"
-                        placeholder="Package Title"
+                        placeholder="Título del paquete"
                       />
                       <ErrorMessage
                         name="packageTitle"
@@ -147,14 +147,14 @@ const CreateWorldTour = () => {
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Package Price
+                      Precio del paquete
                     </label>
                     <div className="col-10">
                       <Field
                         className="form-control"
                         name="packagePrice"
                         type="number"
-                        placeholder="Package Price"
+                        placeholder="Precio del paquete"
                       />
                       <ErrorMessage
                         name="packagePrice"
@@ -164,7 +164,7 @@ const CreateWorldTour = () => {
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Package Description
+                      Descripción del paquete
                     </label>
                     <div className="col-10">
                       <CKEditor
@@ -201,7 +201,7 @@ const CreateWorldTour = () => {
                     </div>
                   </div>
                   <div className="form-group row">
-                    <label className="col-2 col-form-label">Header Image</label>
+                    <label className="col-2 col-form-label">Imagen del encabezado</label>
                     <div className="col-10">
                       <div>
                         <Dropzone
@@ -225,11 +225,10 @@ const CreateWorldTour = () => {
                                 >
                                   <input {...getInputProps()} />
                                   {isDragActive ? (
-                                    <span>Drop the file here ...</span>
+                                    <span>Suelta el archivo aquí  ...</span>
                                   ) : (
                                     <span>
-                                      Drag 'n' drop cover image here, or click
-                                      to select file
+                                      Arrastra y suelta el archivo aquí, o haz clic para seleccionar el archivo
                                     </span>
                                   )}
                                 </div>
@@ -275,7 +274,7 @@ const CreateWorldTour = () => {
                         style={loadingButtonStyle}
                         disabled={isSubmitting}
                       >
-                        Create Tour
+                        Crear gira
                       </button>
                     </div>
                   </div>

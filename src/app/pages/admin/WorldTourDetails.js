@@ -110,7 +110,7 @@ const WorldTourDetails = () => {
         setResponse({
           success: {
             show: true,
-            message: `Booking Confirmed Successfully`
+            message: `Reserva confirmada con éxito`
           },
           error: {
             show: false,
@@ -126,7 +126,7 @@ const WorldTourDetails = () => {
           },
           error: {
             show: true,
-            message: "Could not make payment at the moment"
+            message: "No se pudo hacer el pago en este momento"
           }
         });
       });
@@ -141,7 +141,7 @@ const WorldTourDetails = () => {
         setResponse({
           success: {
             show: true,
-            message: `Package Deleted Successfully!`
+            message: `Paquete eliminado con éxito`
           },
           error: {
             show: false,
@@ -160,7 +160,7 @@ const WorldTourDetails = () => {
           },
           error: {
             show: true,
-            message: "Could not delete package"
+            message: "No se pudo eliminar el paquete"
           }
         });
       });
@@ -193,7 +193,7 @@ const WorldTourDetails = () => {
                       // style={loadingButtonStyle}
                       // onClick={() => handleClickChangeStatus("Canceled")}
                     >
-                      Book Now
+                      Reserva ahora
                     </button>
                   </StripeCheckout>
                 ) : (
@@ -202,7 +202,7 @@ const WorldTourDetails = () => {
                     // style={loadingButtonStyle}
                     onClick={() => setDeleteConfirm(true)}
                   >
-                    Delete Package
+                    Eliminar paquete
                   </button>
                 )
               ) : (
@@ -211,7 +211,7 @@ const WorldTourDetails = () => {
                   // style={loadingButtonStyle}
                   onClick={() => setShowLogin(true)}
                 >
-                  Book Now
+                  Reservar ahora
                 </button>
               )}
             </PortletHeaderToolbar>
@@ -257,19 +257,19 @@ const WorldTourDetails = () => {
             </div>
           )}
           <div className="text-right mt-3">
-            <h5>Total Price: PKR {deals?.details.packages.price}</h5>
+            <h5>Precio total: PKR {deals?.details.packages.price}</h5>
           </div>
           {user && user.role === "2" && (
             <div>
-              <h4>Booked By:</h4>
+              <h4>Agendado por:</h4>
               <Table responsive>
                 <thead>
                   <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
                     <th>Email</th>
-                    <th>Mobile No</th>
-                    <th>Passport No</th>
+                    <th>Número de telefono</th>
+                    <th>Número de pasaporte</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -290,15 +290,15 @@ const WorldTourDetails = () => {
       </Portlet>
       <Modal show={deleteConfirm} onHide={() => setDeleteConfirm(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Confirm</Modal.Title>
+          <Modal.Title>Confirmar</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Are you sure you want to delete this package?</Modal.Body>
+        <Modal.Body>Estás seguro que quiere eliminar este paquete?</Modal.Body>
         <Modal.Footer>
           <button
             className="btn btn-danger btn-outlined"
             onClick={handleDeletePackage}
           >
-            Delete Now
+            Eliminar ahora
           </button>
         </Modal.Footer>
       </Modal>

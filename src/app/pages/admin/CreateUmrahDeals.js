@@ -54,7 +54,7 @@ const CreateUmrahDeals = () => {
   return (
     <div className="pb-5">
       <Portlet className="kt-portlet--height-fluid-half kt-portlet--border-bottom-brand">
-        <PortletHeader title="Create Umrah Deals" />
+        <PortletHeader title="Crear acuerdos para la Umrah" />
         <PortletBody>
           <Alert show={success.show} variant="success">
             {success.message}
@@ -101,7 +101,7 @@ const CreateUmrahDeals = () => {
                     disableLoading();
                     setError({
                       show: true,
-                      message: "Could not create Package!"
+                      message: "No se pudo crear el paquete!"
                     });
                     setSubmitting(false);
                     closeAlert();
@@ -120,19 +120,19 @@ const CreateUmrahDeals = () => {
                     <label className="col-xl-3" />
                     <div className="col-lg-9 col-xl-6">
                       <h3 className="kt-section__title kt-section__title-sm">
-                        Provide Package Details here:
+                        Provee los detalles del paquete aquí:
                       </h3>
                     </div>
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Package Title
+                      Título del paquete
                     </label>
                     <div className="col-10">
                       <Field
                         className="form-control"
                         name="packageTitle"
-                        placeholder="Package Title"
+                        placeholder="Título del paquete"
                       />
                       <ErrorMessage
                         name="packageTitle"
@@ -142,13 +142,13 @@ const CreateUmrahDeals = () => {
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Number of People
+                      Número de personas
                     </label>
                     <div className="col-10">
                       <Field
                         className="form-control"
                         name="numberOfPeople"
-                        placeholder="Number of People"
+                        placeholder="Número de personas"
                         type="number"
                       />
                       <ErrorMessage
@@ -159,7 +159,7 @@ const CreateUmrahDeals = () => {
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Number of Days
+                      Número de días
                     </label>
                     <div className="col-10">
                       <Field
@@ -167,7 +167,7 @@ const CreateUmrahDeals = () => {
                         name="numberOfDays"
                         as="select"
                       >
-                        <option value="">--Select number of days--</option>
+                        <option value="">--Selecciona un número de días--</option>
                         <option value="14">14</option>
                         <option value="21">21</option>
                         <option value="30">30</option>
@@ -180,14 +180,14 @@ const CreateUmrahDeals = () => {
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Package Price
+                      Precio del paquete
                     </label>
                     <div className="col-10">
                       <Field
                         className="form-control"
                         name="packagePrice"
                         type="number"
-                        placeholder="Package Price"
+                        placeholder="Precio del paquete"
                       />
                       <ErrorMessage
                         name="packagePrice"
@@ -197,7 +197,7 @@ const CreateUmrahDeals = () => {
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Package Description
+                      Descripción del paquete
                     </label>
                     <div className="col-10">
                       <CKEditor
@@ -230,7 +230,7 @@ const CreateUmrahDeals = () => {
                     </div>
                   </div>
                   <div className="form-group row">
-                    <label className="col-2 col-form-label">Header Image</label>
+                    <label className="col-2 col-form-label">Imagen de encabezado</label>
                     <div className="col-10">
                       <div>
                         <Dropzone
@@ -254,11 +254,10 @@ const CreateUmrahDeals = () => {
                                 >
                                   <input {...getInputProps()} />
                                   {isDragActive ? (
-                                    <span>Drop the file here ...</span>
+                                    <span>Suelta el archivo aquí ...</span>
                                   ) : (
                                     <span>
-                                      Drag 'n' drop cover image here, or click
-                                      to select file
+                                      Arrastra y suelta un archivo aquí, o haz clic para seleccionar un archivo
                                     </span>
                                   )}
                                 </div>
@@ -303,7 +302,7 @@ const CreateUmrahDeals = () => {
                         style={loadingButtonStyle}
                         disabled={isSubmitting}
                       >
-                        Create Package
+                        Crear acuerdo
                       </button>
                     </div>
                   </div>
