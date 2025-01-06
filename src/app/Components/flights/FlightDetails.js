@@ -73,7 +73,7 @@ const FlightDetails = ({
             },
             error: {
               show: true,
-              message: "Could not book Flight at the moment",
+              message: "No se pudo reservar el vuelo en este momento",
             },
           });
         });
@@ -96,7 +96,7 @@ const FlightDetails = ({
             setResponse({
               success: {
                 show: true,
-                message: `Booking ${status} Successfully`,
+                message: `Reserva ${status} con éxito`,
               },
               error: {
                 show: false,
@@ -113,7 +113,7 @@ const FlightDetails = ({
             },
             error: {
               show: true,
-              message: "Could not book Flight at the moment",
+              message: "No se pudo cambiar el estado de la reserva en este momento",
             },
           });
         });
@@ -127,7 +127,6 @@ const FlightDetails = ({
     setShowDetails(true);
   };
   const makePayment = (token) => {
-    console.log("token", token);
     checkoutForPayment({
       token,
       amount: parseInt(flight.details?.price?.total, 10) * 100,
@@ -141,7 +140,7 @@ const FlightDetails = ({
           setResponse({
             success: {
               show: true,
-              message: `Booking Confirmed Successfully`,
+              message: `Vuelo reservado con éxito`,
             },
             error: {
               show: false,
@@ -171,7 +170,7 @@ const FlightDetails = ({
           },
           error: {
             show: true,
-            message: "Could not make payment at the moment",
+            message: "No se pudo hacer el pago en este momento",
           },
         });
       });
@@ -181,26 +180,26 @@ const FlightDetails = ({
     <React.Fragment>
       <Modal show={showDetails} onHide={() => setShowDetails(false)} size="lg">
         <Modal.Header closeButton>
-          <Modal.Title>Flight Details</Modal.Title>
+          <Modal.Title>Detalles del Vuelo</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {user && user.role !== "2" && !user.passportNo && (
             <Alert show={true} onHide={() => {}} variant="warning">
-              Your Passport Number is missing Please complete your profile by
+              Tu pasaporte no está registrado, por favor regístralo haciendo{" "}
               <Alert.Link>
-                <Link to="/account"> clicking here</Link>
+                <Link to="/account"> click aquí </Link>
               </Alert.Link>
             </Alert>
           )}
-          <h4 className="mb-3 col-12">Routes</h4>
+          <h4 className="mb-3 col-12">Rutas</h4>
           <Table responsive>
             <thead>
               <tr>
-                <th>Route Type</th>
-                <th>Airline</th>
-                <th>Departure</th>
-                <th>Arrival</th>
-                <th>Duration</th>
+                <th>Tipo de ruta</th>
+                <th>Aerolínea</th>
+                <th>Paritda</th>
+                <th>Llegada</th>
+                <th>Duración</th>
               </tr>
             </thead>
             <tbody>
@@ -238,16 +237,16 @@ const FlightDetails = ({
             </tbody>
           </Table>
 
-          <h4 className="mb-3 col-12">Travelers Pricing</h4>
+          <h4 className="mb-3 col-12">Precios por pasajero</h4>
           <Table responsive>
             <thead>
               <tr>
-                <th>Type</th>
-                <th>Fare Option</th>
-                <th>Cabins</th>
-                <th>Classes</th>
-                <th>Weight</th>
-                <th>Individual Price</th>
+                <th>Tipo</th>
+                <th>Opción de tarifa</th>
+                <th>Cabinas</th>
+                <th>Clases</th>
+                <th>Peso</th>
+                <th>Precio individual</th>
               </tr>
             </thead>
             <tbody>
@@ -283,40 +282,40 @@ const FlightDetails = ({
           <hr />
           {user && user.role === "2" && (
             <>
-              <h4 className="mb-3 col-12">Booked By</h4>
+              <h4 className="mb-3 col-12">Reservado por</h4>
               <div className="row mx-2">
                 <div className="form-group col-6">
-                  <div className="form-label">First Name</div>
+                  <div className="form-label">Nombre</div>
                   <h5>{flight?.bookedBy?.firstName}</h5>
                 </div>
                 <div className="form-group col-6">
-                  <div className="form-label">Last Name</div>
+                  <div className="form-label">Apellido</div>
                   <h5>{flight?.bookedBy?.lastName}</h5>
                 </div>
                 <div className="form-group col-6">
                   <div className="form-label">Email</div>
-                  <h5>{flight?.bookedBy?.email || "Not Provided"}</h5>
+                  <h5>{flight?.bookedBy?.email || "No proporcionado"}</h5>
                 </div>
                 <div className="form-group col-6">
-                  <div className="form-label">Mobile No</div>
-                  <h5>{flight?.bookedBy?.mobileNo || "Not Provided"}</h5>
+                  <div className="form-label">Número de teléfono</div>
+                  <h5>{flight?.bookedBy?.mobileNo || "No proporcionado"}</h5>
                 </div>
                 <div className="form-group col-6">
-                  <div className="form-label">Passport Number</div>
-                  <h5>{flight?.bookedBy?.passportNo || "Not Provided"}</h5>
+                  <div className="form-label">Número de pasaporte</div>
+                  <h5>{flight?.bookedBy?.passportNo || "No proporcionado"}</h5>
                 </div>
               </div>
             </>
           )}
 
           <div className="p-3 text-right">
-            <div>Total Price</div>
+            <div>Precio total</div>
             {flight?.details?.price.currency}-{flight?.details?.price?.total}
           </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowDetails(false)}>
-            Close
+            Cerrar
           </Button>
           {(userType === "user" || !isAuthorized || isAuthorized) &&
           userType !== "admin" ? (
@@ -331,7 +330,7 @@ const FlightDetails = ({
                 disabled={user && !user.passportNo}
                 onClick={handleClickBookNow}
               >
-                Book Now
+                Reservar ahora
               </button>
             ) : bookingStatus?.bookingStatus === "Pending" ? (
               <button
@@ -344,7 +343,7 @@ const FlightDetails = ({
                 style={loadingButtonStyle}
                 onClick={() => handleClickChangeStatus("Canceled")}
               >
-                Cancel Booking
+                Cancelar Reserva
               </button>
             ) : (
               <StripeCheckout
@@ -366,7 +365,7 @@ const FlightDetails = ({
                   style={loadingButtonStyle}
                   // onClick={() => handleClickChangeStatus("Canceled")}
                 >
-                  Confirm To Checkout
+                  Confirmar para pagar
                 </button>
               </StripeCheckout>
             )
@@ -381,7 +380,7 @@ const FlightDetails = ({
               style={loadingButtonStyle}
               onClick={() => handleClickChangeStatus("Approved")}
             >
-              Approve Booking
+              Aprovar reserva
             </button>
           )}
         </Modal.Footer>

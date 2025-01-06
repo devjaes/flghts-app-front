@@ -25,7 +25,7 @@ const FlightList = ({
           className="d-flex justify-content-center align-items-center"
           style={{ height: 100, fontSize: 20 }}
         >
-          Nothing Found!
+          No se ha encontrado nada!
         </div>
       ) : (
         flights.map((flight, index) => (
@@ -46,15 +46,15 @@ const FlightList = ({
             >
               {bookingStatuses && (
                 <div>
-                  Booking Status: {bookingStatuses[index]?.bookingStatus}
+                  Estado de la reserva: {bookingStatuses[index]?.bookingStatus}
                 </div>
               )}
               {bookingStatuses && (
-                <div>Ticket Number: {bookingStatuses[index]?._id}</div>
+                <div>Nuero de ticket: {bookingStatuses[index]?._id}</div>
               )}
               <div className="d-flex align-items-center">
                 <div className="mr-3">
-                  Total Price: {flight.details.price.currency}-
+                  Precio total: {flight.details.price.currency}-
                   {flight.details.price?.total}
                 </div>
                 <div>
@@ -67,7 +67,7 @@ const FlightList = ({
                       )
                     }
                   >
-                    Details
+                    Detalles
                   </button>
                 </div>
               </div>
