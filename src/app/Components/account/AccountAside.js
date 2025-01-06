@@ -26,11 +26,11 @@ const AccountAside = ({ selected, setSelected, user }) => {
                   <span className="kt-widget__data">{user.email}</span>
                 </div>
                 <div className="kt-widget__info">
-                  <span className="kt-widget__label">Phone:</span>
+                  <span className="kt-widget__label">Teléfono:</span>
                   <span className="kt-widget__data">{user.mobileNo}</span>
                 </div>
                 <div className="kt-widget__info">
-                  <span className="kt-widget__label">Location:</span>
+                  <span className="kt-widget__label">Dirección:</span>
                   <span className="kt-widget__data">{user.address}</span>
                 </div>
               </div>
@@ -73,7 +73,7 @@ const AccountAside = ({ selected, setSelected, user }) => {
                       </svg>{" "}
                     </span>
                     <span className="kt-widget__desc">
-                      Personal Information
+                      Información personal
                     </span>
                   </span>
                 </span>
@@ -114,7 +114,7 @@ const AccountAside = ({ selected, setSelected, user }) => {
                         </g>
                       </svg>{" "}
                     </span>
-                    <span className="kt-widget__desc">Change Password</span>
+                    <span className="kt-widget__desc">Cambiar contraseña</span>
                   </span>
                 </span>
               </div>

@@ -61,7 +61,7 @@ const ChangePasswordForm = ({user}) => {
           .catch((error) => {
             disableLoading();
             setSubmitting(false);
-            setError({show: true, message: 'Could not change password'})
+            setError({show: true, message: 'No se pudo cambiar la contraseña, inténtalo de nuevo'})
             closeAlert()
           });
       }}
@@ -77,37 +77,37 @@ const ChangePasswordForm = ({user}) => {
                   <label className="col-xl-3" />
                   <div className="col-lg-9 col-xl-6">
                     <h3 className="kt-section__title kt-section__title-sm">
-                      Change Or Recover Your Password:
+                      Cambia o reestablece tu contraseña:
                     </h3>
                   </div>
                 </div>
                 <div className="form-group row">
                   <label className="col-xl-3 col-lg-3 col-form-label">
-                    Current Password
+                    Contraseña actual
                   </label>
                   <div className="col-lg-9 col-xl-6">
-                    <Field type="password" className="form-control" name='oldPassword' placeholder="Current password"/>
+                    <Field type="password" className="form-control" name='oldPassword' placeholder="Contraseña actual"/>
                     <Link to="/auth/forgot-password" className="kt-link kt-font-sm kt-font-bold kt-margin-t-5">
-                      Forgot password ?
+                      Olvidaste tu contraseña ?
                     </Link>
                     <ErrorMessage name='oldPassword' render={formErrorMessage}/>
                   </div>
                 </div>
                 <div className="form-group row">
                   <label className="col-xl-3 col-lg-3 col-form-label">
-                    New Password
+                    Nueva contraseña
                   </label>
                   <div className="col-lg-9 col-xl-6">
-                    <Field type="password" className="form-control" name="newPassword" placeholder="New password"/>
+                    <Field type="password" className="form-control" name="newPassword" placeholder="Nueva contraseña"/>
                     <ErrorMessage name='newPassword' render={formErrorMessage}/>
                   </div>
                 </div>
                 <div className="form-group form-group-last row">
                   <label className="col-xl-3 col-lg-3 col-form-label">
-                    Verify Password
+                    Confirma tu contraseña
                   </label>
                   <div className="col-lg-9 col-xl-6">
-                    <Field type="password" className="form-control" name="confirmPassword" placeholder="Verify password"/>
+                    <Field type="password" className="form-control" name="confirmPassword" placeholder="Confirma tu contraseña"/>
                     <ErrorMessage name='confirmPassword' render={formErrorMessage}/>
                   </div>
                 </div>
@@ -129,10 +129,10 @@ const ChangePasswordForm = ({user}) => {
                     style={loadingButtonStyle}
                     disabled={isSubmitting}
                   >
-                    Change Password
+                    Cambiar contraseña
                   </button>
                   &nbsp;
-                  <button type='button' onClick={() =>{setSuccess(false); resetForm({})}} className="btn btn-secondary">Cancel</button>
+                  <button type='button' onClick={() =>{setSuccess(false); resetForm({})}} className="btn btn-secondary">Cancelar</button>
                 </div>
               </div>
             </div>

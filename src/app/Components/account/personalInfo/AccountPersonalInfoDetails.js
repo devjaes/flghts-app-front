@@ -54,13 +54,13 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
       })
       .catch(error => {
         disableLoading();
-        setError({ show: true, message: "Could not edit!" });
+        setError({ show: true, message: "No se pudo editar" });
         closeAlert();
       });
   };
 
   const onDropReject = files => {
-    setError({ show: true, message: "Could not accept this file" });
+    setError({ show: true, message: "No se pudo aceptar tu archivo" });
     setTimeout(() => {
       setError({ show: false, message: "" });
     }, 2000);
@@ -109,7 +109,7 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
                 </div>
               </div>
               {!edit && (
-                <Tooltip title="Edit Profile" placement="top">
+                <Tooltip title="Editar perfil" placement="top">
                   <button
                     className="btn btn-label btn-icon position-absolute"
                     onClick={() => setEdit(true)}
@@ -123,24 +123,24 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
             {!edit ? (
               <div className="row">
                 <div className="form-group col-6">
-                  <div className="form-label">First Name</div>
+                  <div className="form-label">Nombre</div>
                   <h5>{user.firstName}</h5>
                 </div>
                 <div className="form-group col-6">
-                  <div className="form-label">Last Name</div>
+                  <div className="form-label">Apellido</div>
                   <h5>{user.lastName}</h5>
                 </div>
                 <div className="form-group col-6">
-                  <div className="form-label">Address</div>
-                  <h5>{user.address || "Not Provided"}</h5>
+                  <div className="form-label">Dirección</div>
+                  <h5>{user.address || "No propocionada"}</h5>
                 </div>
                 <div className="form-group col-6">
-                  <div className="form-label">Country</div>
-                  <h5>{user.country || "Not Provided"}</h5>
+                  <div className="form-label">País</div>
+                  <h5>{user.country || "No proporcionado"}</h5>
                 </div>
                 <div className="form-group col-6">
-                  <div className="form-label">Passport Number</div>
-                  <h5>{user.passportNo || "Not Provided"}</h5>
+                  <div className="form-label">Número de pasaporte</div>
+                  <h5>{user.passportNo || "No proporcionado"}</h5>
                 </div>
               </div>
             ) : (
@@ -181,7 +181,7 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
                       })
                       .catch(error => {
                         disableLoading();
-                        setError({ show: true, message: "Could not edit!" });
+                        setError({ show: true, message: "No se pudo editar" });
                         setSubmitting(false);
                         closeAlert();
                       });
@@ -200,19 +200,19 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
                         <label className="col-xl-3" />
                         <div className="col-lg-9 col-xl-6">
                           <h3 className="kt-section__title kt-section__title-sm">
-                            Edit Your Profile:
+                            Edita tu perfil:
                           </h3>
                         </div>
                       </div>
                       <div className="form-group row">
                         <label className="col-xl-3 col-lg-3 col-form-label">
-                          First Name
+                          Nombre
                         </label>
                         <div className="col-lg-9 col-xl-6">
                           <Field
                             className="form-control"
                             name="firstName"
-                            placeholder="First Name"
+                            placeholder="Nombre"
                           />
                           <ErrorMessage
                             name="firstName"
@@ -222,13 +222,13 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
                       </div>
                       <div className="form-group row">
                         <label className="col-xl-3 col-lg-3 col-form-label">
-                          Last Name
+                          Apellido
                         </label>
                         <div className="col-lg-9 col-xl-6">
                           <Field
                             className="form-control"
                             name="lastName"
-                            placeholder="Last Name"
+                            placeholder="Apellido"
                           />
                           <ErrorMessage
                             name="lastName"
@@ -238,7 +238,7 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
                       </div>
                       <div className="form-group row">
                         <label className="col-xl-3 col-lg-3 col-form-label">
-                          Mobile No
+                          Numero de teléfono
                         </label>
                         <div className="col-lg-9 col-xl-6">
                           <Field
@@ -254,7 +254,7 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
                       </div>
                       <div className="form-group row">
                         <label className="col-xl-3 col-lg-3 col-form-label">
-                          Passport Number
+                          Número de pasaporte
                         </label>
                         <div className="col-lg-9 col-xl-6">
                           <Field
@@ -270,13 +270,13 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
                       </div>
                       <div className="form-group row">
                         <label className="col-xl-3 col-lg-3 col-form-label">
-                          Address
+                          Dirección
                         </label>
                         <div className="col-lg-9 col-xl-6">
                           <Field
                             className="form-control"
                             name="address"
-                            placeholder="Address"
+                            placeholder="Dirección"
                           />
                           <ErrorMessage
                             name="address"
@@ -286,7 +286,7 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
                       </div>
                       <div className="form-group row">
                         <label className="col-xl-3 col-lg-3 col-form-label">
-                          Country
+                          País
                         </label>
                         <div className="col-lg-9 col-xl-6">
                           <InputCountry />
@@ -311,7 +311,7 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
                                 style={loadingButtonStyle}
                                 disabled={isSubmitting}
                               >
-                                Save
+                                Guardar
                               </button>
                               &nbsp;
                               <button
@@ -319,7 +319,7 @@ const AccountPersonalInfoDetails = ({ user, fulfillUser }) => {
                                 onClick={() => setEdit(false)}
                                 className="btn btn-secondary"
                               >
-                                Cancel
+                                Cancelar
                               </button>
                             </div>
                           </div>

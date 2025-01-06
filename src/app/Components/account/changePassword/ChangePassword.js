@@ -5,7 +5,7 @@ import ChangePasswordForm from "./ChangePasswordForm";
 const ChangePassword = () => {
   return (
     <div className="kt-portlet kt-portlet--height-fluid">
-      <AccountContentHeader title='Change Password' subtitle='change or reset your account password'/>
+      <AccountContentHeader title='Cambiar contraseña' subtitle='Cambio o reestablece tu contraseña'/>
       <ChangePasswordForm/>
     </div>
   );

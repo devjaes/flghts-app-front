@@ -6,8 +6,8 @@ const AccountPersonalInfo = () => {
   return (
     <div className="kt-portlet kt-portlet--height-fluid">
       <AccountContentHeader
-        title="Personal Information"
-        subtitle="update your personal information"
+        title="Información personal"
+        subtitle="Actualiza tu información personal"
       />
       <AccountPersonalInfoDetails/>
     </div>
