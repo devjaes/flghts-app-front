@@ -18,7 +18,7 @@ export function ErrorPage2() {
                 <h1>OOPS!</h1>
               </span>
               <span className="kt-error_desc kt-font-light">
-                Something went wrong here
+                Algo salió mal
               </span>
             </div>
           </div>

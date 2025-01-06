@@ -18,9 +18,9 @@ export function ErrorPage6() {
             </div>
 
             <p className="kt-error_description kt-font-light">
-              Looks like something went wrong.
+              Algo salió mal.
               <br />
-              We're working on it
+              Estamos trabajando en ello
             </p>
           </div>
         </div>

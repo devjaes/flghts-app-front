@@ -16,13 +16,13 @@ export function ErrorPage5() {
             <span className="kt-error_title">
               <h1>Oops!</h1>
             </span>
-            <p className="kt-error_subtitle">Something went wrong here.</p>
+            <p className="kt-error_subtitle">Algo salió mal.</p>
             <p className="kt-error_description">
-              We're working on it and we'll get it fixed
+              Estamos trabajando ello y lo arreglaremos
               <br />
-              as soon possible.
+              lo más pronto posible.
               <br />
-              You can back or use our Help Center.
+              Puedes regresar o ocupar el centro de ayuda.
             </p>
           </div>
         </div>

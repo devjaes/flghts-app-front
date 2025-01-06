@@ -18,14 +18,14 @@ export function ErrorPage3() {
             <div className="kt-error_number">
               <h1>404</h1>
             </div>
-            <p className="kt-error_title kt-font-light">How did you get here</p>
+            <p className="kt-error_title kt-font-light">Cómo llegaste aquí</p>
             <p className="kt-error_subtitle">
-              Sorry we can't seem to find the page you're looking for.
+              No podemos encontrar la página que buscas.
             </p>
             <p className="kt-error_description">
-              There may be a misspelling in the URL entered,
+              Parece que escribiste la url equivocada,
               <br />
-              or the page you are looking for may no longer exist.
+              o la página que buscas ya no existe.
             </p>
           </div>
         </div>

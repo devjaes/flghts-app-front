@@ -15,7 +15,7 @@ export function ErrorPage4() {
           <div className="kt-error_container">
             <h1 className="kt-error_number">404</h1>
             <p className="kt-error_title">ERROR</p>
-            <p className="kt-error_description">Nothing left to do here.</p>
+            <p className="kt-error_description">Nada que hacer aquí.</p>
           </div>
         </div>
       </div>
