@@ -23,28 +23,28 @@ const Filters = ({ filters, handleChangeFilters }) => {
           <DropdownItem
             onClick={() => handleChangeFilters("bookingStatus", "")}
           >
-            All
+            Todos
           </DropdownItem>
 
           <DropdownItem
             onClick={() => handleChangeFilters("bookingStatus", "Pending")}
           >
-            Pending
+            Pendientes
           </DropdownItem>
           <DropdownItem
             onClick={() => handleChangeFilters("bookingStatus", "Approved")}
           >
-            Approved
+            Aprovados
           </DropdownItem>
           <DropdownItem
             onClick={() => handleChangeFilters("bookingStatus", "Confirmed")}
           >
-            Confirmed
+            Confirmados
           </DropdownItem>
           <DropdownItem
             onClick={() => handleChangeFilters("bookingStatus", "Canceled")}
           >
-            Canceled
+            Cancelados
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>

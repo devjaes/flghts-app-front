@@ -55,7 +55,7 @@ const PaginationComponent = ({
           </DropdownMenu>
         </Dropdown>
         <div className="ml-2">
-          Showing {pageNo}-{perPage} of {total}
+          Mostrando {pageNo}-{perPage} de {total}
         </div>
       </div>
     </div>
