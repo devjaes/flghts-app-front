@@ -112,7 +112,7 @@ const LoginForm = ({ isModal, intl, handleLogin, ...props }) => {
               name="password"
               type={passwordField ? "password" : "text"}
               className="form-control"
-              placeholder="Password"
+              placeholder="Contraseña"
               required
             />
             <span
@@ -128,7 +128,7 @@ const LoginForm = ({ isModal, intl, handleLogin, ...props }) => {
           <div className="row kt-login__extra">
             <div className="col kt-align-right">
               <Link to="/auth/forgot-password" className="kt-login__link">
-                Forget Password ?
+                Olvidaste tu contraseña ?
               </Link>
             </div>
           </div>
@@ -144,12 +144,12 @@ const LoginForm = ({ isModal, intl, handleLogin, ...props }) => {
               )}`}
               style={loadingButtonStyle}
             >
-              Sign In
+              Ingresar
             </button>
           </div>
           <div className="kt-login__account">
             <span className="kt-login__account-msg">
-              Don't have an account yet ?
+              No tienes una cuenta aún ?
             </span>
             &nbsp;&nbsp;
             <Link
@@ -157,7 +157,7 @@ const LoginForm = ({ isModal, intl, handleLogin, ...props }) => {
               id="kt_login_signup"
               className="kt-login__account-link"
             >
-              Sign Up!
+              Regístrate!
             </Link>
           </div>
         </Form>
