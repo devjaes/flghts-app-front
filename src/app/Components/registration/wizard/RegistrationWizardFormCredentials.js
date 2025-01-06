@@ -6,20 +6,20 @@ const RegistrationWizardFormCredentials = ({errors}) => {
   return (
     <RegistrationWizardContent title='Add Credentials'>
       <div className="form-group">
-        <label>Email address*</label>
+        <label>Correo electrónico*</label>
         {formErrorMessage(errors.email)}
         <Field className="form-control" name="email" placeholder="someone@somthing.com"/>
       </div>
       <div className="form-group">
-        <label>Password*</label>
+        <label>Contraseña*</label>
         {formErrorMessage(errors.password)}
         <Field className="form-control" type='password' name="password" placeholder="********"/>
         <span className="form-text text-muted">
-          Password must be a minimum 8 characters with at least one capital letter and one number
+          La contraseña debe tener al menos 8 caracteres y una mayúscula
         </span>
       </div>
       <div className="form-group">
-        <label>Confirm Password*</label>
+        <label>Confirmar contraseña*</label>
         {formErrorMessage(errors.confirmPassword)}
         <Field className="form-control" type='password' name="confirmPassword" placeholder="********"/>
       </div>

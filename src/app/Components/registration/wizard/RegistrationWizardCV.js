@@ -18,7 +18,7 @@ const RegistrationWizardCv = ({errors, setFieldValue, values}) => {
     setFieldValue('cv', null)
   }
   return (
-    <RegistrationWizardContent title="Upload Your CV">
+    <RegistrationWizardContent title="Sube tu CV">
       {error.show && (
         <div role="alert" className="alert alert-danger">
           <div className="alert-text">{error.message}</div>
@@ -40,8 +40,8 @@ const RegistrationWizardCv = ({errors, setFieldValue, values}) => {
                 <input {...getInputProps()} />
                 {
                   isDragActive
-                    ? <span>Drop the file here ...</span>
-                    : <span>Drag 'n' drop file in pdf here, or click to select file</span>
+                    ? <span>Suelta tu archivo aquí ...</span>
+                    : <span>Arrastra y suelta un pedf aquí, o selecciona tus archivos</span>
                 }
               </div>
             </section>

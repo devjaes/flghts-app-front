@@ -41,7 +41,7 @@ const RegistrationWizardActions = ({
           onClick={() => setCurrent(current - 1)}
           className="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"
         >
-          Previous
+          Anterior
         </button>
       )}
       {current === 3 && (
@@ -54,7 +54,7 @@ const RegistrationWizardActions = ({
           )}`}
           style={loadingButtonStyle}
         >
-          Register
+          Registrar
         </button>
       )}
       {current !== 3 && (
@@ -63,7 +63,7 @@ const RegistrationWizardActions = ({
           onClick={handleNextStep}
           className="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u float-right"
         >
-          Next Step
+          Siguiente
         </button>
       )}
     </div>

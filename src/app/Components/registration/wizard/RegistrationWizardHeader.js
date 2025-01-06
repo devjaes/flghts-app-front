@@ -11,7 +11,7 @@ const RegistrationWizardHeader = ({ current }) => {
         >
           <div className="kt-wizard-v3__nav-body">
             <div className="kt-wizard-v3__nav-label">
-              <span>1</span> Personal Information
+              <span>1</span> Información personal
             </div>
             <div className="kt-wizard-v3__nav-bar" />
           </div>
@@ -23,7 +23,7 @@ const RegistrationWizardHeader = ({ current }) => {
         >
           <div className="kt-wizard-v3__nav-body">
             <div className="kt-wizard-v3__nav-label">
-              <span>2</span> Credentials
+              <span>2</span> Credenciales
             </div>
             <div className="kt-wizard-v3__nav-bar" />
           </div>
@@ -35,7 +35,7 @@ const RegistrationWizardHeader = ({ current }) => {
         >
           <div className="kt-wizard-v3__nav-body">
             <div className="kt-wizard-v3__nav-label">
-              <span>3</span> Address
+              <span>3</span> Dirección
             </div>
             <div className="kt-wizard-v3__nav-bar" />
           </div>
@@ -47,7 +47,7 @@ const RegistrationWizardHeader = ({ current }) => {
         >
           <div className="kt-wizard-v3__nav-body">
             <div className="kt-wizard-v3__nav-label">
-              <span>4</span> Confirmation
+              <span>4</span> Confirmación
             </div>
             <div className="kt-wizard-v3__nav-bar" />
           </div>

@@ -7,7 +7,7 @@ const RegistrationWizardFormPInfo = ({ errors }) => {
   return (
     <RegistrationWizardContent title="Setup Your Personal Information">
       <div className="form-group">
-        <label>First Name*</label>
+        <label>Nombre*</label>
         {formErrorMessage(errors.firstName)}
         <Field
           className="form-control"
@@ -16,7 +16,7 @@ const RegistrationWizardFormPInfo = ({ errors }) => {
           required
         />
         <span className="form-text text-muted">
-          Please enter your First Name
+          Ingresa tu nombre
         </span>
       </div>
       <div className="form-group">
@@ -29,11 +29,11 @@ const RegistrationWizardFormPInfo = ({ errors }) => {
           required
         />
         <span className="form-text text-muted">
-          Please enter your Last Name
+          Ingresa tu apellido
         </span>
       </div>
       <div className="form-group">
-        <label>Mobile No*</label>
+        <label>Número de teléfono*</label>
         {formErrorMessage(errors.mobileNo)}
         <Field
           className="form-control"
@@ -42,7 +42,7 @@ const RegistrationWizardFormPInfo = ({ errors }) => {
           required
         />
         <span className="form-text text-muted">
-          Please enter your Mobile Number
+          Ingresa tu número de teléfono
         </span>
       </div>
     </RegistrationWizardContent>

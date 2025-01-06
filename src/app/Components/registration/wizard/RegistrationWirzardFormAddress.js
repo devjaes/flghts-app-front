@@ -8,13 +8,13 @@ const RegistrationWirzardFormAddress = ({errors}) => {
   return (
     <RegistrationWizardContent title="Enter Your Location">
       <div className="form-group">
-        <label>Address*</label>
+        <label>Direccion*</label>
         {formErrorMessage(errors.address)}
-        <Field className="form-control" name="address" placeholder="Address" required/>
-        <span className="form-text text-muted">Please enter your address</span>
+        <Field className="form-control" name="address" placeholder="Dirección" required/>
+        <span className="form-text text-muted">Ingresa tu dirección</span>
       </div>
       <div className="form-group">
-        <label>Country*</label>
+        <label>País*</label>
         {formErrorMessage(errors.country)}
         <InputCountry/>
       </div>
