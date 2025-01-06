@@ -76,7 +76,7 @@ const ResetPassword = ({ intl }) => {
               .catch(() => {
                 disableLoading()
                 setSubmitting(false);
-                setError({show: true, message: 'Something Went Wrong!'})
+                setError({show: true, message: 'Algo salió mal!'})
               });
           }}
         >
@@ -85,11 +85,11 @@ const ResetPassword = ({ intl }) => {
               <Alert show={success.show} variant="success">{success.message}</Alert>
               <Alert show={error.show} variant="danger">{error.message}</Alert>
               <div className="form-group">
-                <Field type="password" className="form-control" name="newPassword" placeholder="New password"/>
+                <Field type="password" className="form-control" name="newPassword" placeholder="Nueva contraseña"/>
                 <ErrorMessage name='newPassword' render={formErrorMessage}/>
               </div>
               <div className="form-group">
-                <Field type="password" className="form-control" name="confirmPassword" placeholder="Verify password"/>
+                <Field type="password" className="form-control" name="confirmPassword" placeholder="Verifica tu contraseña"/>
                 <ErrorMessage name='confirmPassword' render={formErrorMessage}/>
               </div>
               <div className="kt-login__actions">
@@ -104,12 +104,12 @@ const ResetPassword = ({ intl }) => {
                   )}`}
                   style={loadingButtonStyle}
                 >
-                  Reset My Password
+                  Restablecer contraseña
                 </button>
               </div>
               <div className="kt-login__account">
                 <span className="kt-login__account-msg">
-                  Return to Login Page ?
+                  Regresar a la página de login ?
                 </span>
                 &nbsp;&nbsp;
                 <Link to="/auth/login" className="kt-login__account-link">

@@ -80,13 +80,12 @@ const ForgotPassword = ({ intl }) => {
               )}
               {success && (
                 <div role="alert" className="alert alert-success">
-                  <div className="alert-text">Email Sent Successfully!</div>
+                  <div className="alert-text">Email enviado exitosamente!</div>
                 </div>
               )}
               <div className="text-body">
-                If you have forgotten your password, please enter your account's
-                email address below and click the "Reset My Password" button. You
-                will receive an email that contains a link to set a new password
+              Si ha olvidado su contraseña, ingrese la dirección de correo electrónico de su cuenta
+              a continuación y haga clic en el botón "Restablecer mi contraseña". Recibirá un correo electrónico con un enlace para establecer una nueva contraseña.
               </div>
               <div className="input-group">
                 <Field
@@ -109,12 +108,12 @@ const ForgotPassword = ({ intl }) => {
                   )}`}
                   style={loadingButtonStyle}
                 >
-                  Reset My Password
+                  Restablecer mi contraseña
                 </button>
               </div>
               <div className="kt-login__account">
                 <span className="kt-login__account-msg">
-                  Return to Login Page ?
+                  Regresar a la página de login ?
                 </span>
                 &nbsp;&nbsp;
                 <Link to="/auth/login" className="kt-login__account-link">

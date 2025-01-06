@@ -113,8 +113,7 @@ function Registration({ intl }) {
                         {Object.keys(errors).length > 0 && current === 3 && (
                           <div role="alert" className="alert alert-danger">
                             <div className="alert-text">
-                              There are some Errors in Your Submission please
-                              Provide Complete Required Information
+                            Hay algunos errores en su envío. Por favor, proporcione toda la información requerida.
                             </div>
                           </div>
                         )}
