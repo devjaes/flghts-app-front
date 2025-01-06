@@ -2,13 +2,13 @@ export const createBlogValidations = values => {
   const errors = {};
 
   if (!values.title) {
-    errors.title = "Required!";
+    errors.title = "Requerido!";
   }
   if (!values.description) {
-    errors.description = "Required!";
+    errors.description = "Requerido!";
   }
   if (values.images.length === 0) {
-    errors.images = "Required!";
+    errors.images = "Requerido!";
   }
 
   return errors;

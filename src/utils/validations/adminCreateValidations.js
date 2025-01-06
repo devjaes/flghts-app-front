@@ -2,27 +2,27 @@ export const adminCreateValidations = values => {
   const errors = {};
 
   if (!values.firstName) {
-    errors.firstName = 'Required!'
+    errors.firstName = 'Requerido!'
   }
 
   if (!values.lastName) {
-    errors.lastName = 'Required!'
+    errors.lastName = 'Requerido!'
   }
   if (!values.email) {
-    errors.email = 'Required!'
+    errors.email = 'Requerido!'
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
     errors.email = 'Invalid Email!'
   }
   if (!values.mobileNo) {
-    errors.mobileNo = 'Required!'
-  } else if (!values.mobileNo.match(/^[0-9]{11}$/)) {
-    errors.mobileNo = 'Invalid Mobile No!'
+    errors.mobileNo = 'Requerido!'
+  } else if (!values.mobileNo.match(/^[0-9]{10}$/)) {
+    errors.mobileNo = 'Número de celular inválido!'
   }
   if (!values.address) {
-    errors.address = 'Required!'
+    errors.address = 'Requerido!'
   }
   if (!values.country) {
-    errors.country = 'Required!'
+    errors.country = 'Requerido!'
   }
 
   return errors;

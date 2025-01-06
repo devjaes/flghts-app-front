@@ -28,52 +28,52 @@ export const validateRegistration = (values, current) => {
     }
   });
   if (current === 0 && values.firstName.trim() === "") {
-    errors.firstName = "First Name is Required!";
+    errors.firstName = "Nombre es requerido!";
   } else if (current === 0 && !firstNameValid) {
-    errors.firstName = "Invalid Name!";
+    errors.firstName = "Campo inválido!";
   }
   if (current === 0 && values.lastName.trim() === "") {
-    errors.lastName = "Last Name is Required!";
+    errors.lastName = "Apellido es requerido!";
   } else if (current === 0 && !lastNameValid) {
-    errors.lastName = "Invalid Name!";
+    errors.lastName = "Campo inválido!";
   }
   if (current === 0 && values.mobileNo.trim() === "") {
-    errors.mobileNo = "Mobile No is Required!";
+    errors.mobileNo = "Número de teléfono es requerido!";
   } else if (current === 0 && !values.mobileNo.match(/^[0-9]{11}$/)) {
-    errors.mobileNo = "Invalid Mobile No!";
+    errors.mobileNo = "Número de teléfono inválido!";
   }
   if (current === 1 && values.email.trim() === "") {
-    errors.email = "Email is required!";
+    errors.email = "Email es requerido!";
   } else if (
     current === 1 &&
     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
   ) {
-    errors.email = "Invalid Email!";
+    errors.email = "Email requerido!";
   }
 
   if (current === 1 && values.password.trim() === "") {
-    errors.password = "Password is Required!";
+    errors.password = "Constraseña es requerido!";
   } else if (
     current === 1 &&
     !values.password.match(/^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/)
   ) {
-    errors.password = "Invalid Password";
+    errors.password = "Contraseña inválida";
   }
   if (current === 1 && !values.confirmPassword) {
-    errors.confirmPassword = "Confirm Password is Required!";
+    errors.confirmPassword = "Confirmar contraseña es requerido!";
   } else if (current === 1 && values.password !== values.confirmPassword) {
-    errors.confirmPassword = "Password Does not Match";
+    errors.confirmPassword = "La contraseña no coincide";
   }
   if (current === 2 && !values.address) {
-    errors.address = "Address is Required!";
+    errors.address = "Dirección es requerido!";
   } else if (current === 2 && !addressValid) {
-    errors.address = "Invalid Address!";
+    errors.address = "Dirección inválida!";
   }
   if (current === 2 && !values.country) {
-    errors.country = "Country is Required!";
+    errors.country = "País es requerido!";
   }
   if (current === 3 && !values.agree) {
-    errors.agree = "Please Agree to our privacy and service policy";
+    errors.agree = "Porfavor acepta los términos y condiciones";
   }
   return errors;
 };

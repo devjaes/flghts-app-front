@@ -2,25 +2,25 @@ export const editProfileValidations = values => {
   const errors = {};
 
   if (!values.firstName) {
-    errors.firstName = "Required!";
+    errors.firstName = "Requerido!";
   }
 
   if (!values.lastName) {
-    errors.lastName = "Required!";
+    errors.lastName = "Requerido!";
   }
   if (!values.mobileNo) {
-    errors.mobileNo = "Required!";
-  } else if (!values.mobileNo.match(/^[0-9]{11}$/)) {
-    errors.mobileNo = "Invalid Mobile No!";
+    errors.mobileNo = "Requerido!";
+  } else if (!values.mobileNo.match(/^[0-9]{10}$/)) {
+    errors.mobileNo = "Número de celular inválido!";
   }
   if (values.passportNo && !values.passportNo.match(/^[0-9]{9}$/)) {
-    errors.passportNo = "Invalid Passport Number!";
+    errors.passportNo = "Número de pasaporte inválido!";
   }
   if (!values.address) {
-    errors.address = "Required!";
+    errors.address = "Requerido!";
   }
   if (!values.country) {
-    errors.country = "Required!";
+    errors.country = "Requerido!";
   }
 
   return errors;
