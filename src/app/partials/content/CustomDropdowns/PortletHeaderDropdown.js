@@ -36,39 +36,39 @@ export default class PortletHeaderDropdown extends React.Component {
         <Dropdown.Menu className="dropdown-menu-fit dropdown-menu-right">
           <ul className="kt-nav">
             <li className="kt-nav__section kt-nav__section--first">
-              <span className="kt-nav__section-text">Finance</span>
+              <span className="kt-nav__section-text">Finanzas</span>
             </li>
             <li className="kt-nav__item">
               <a href="#" className="kt-nav__link">
                 <i className="kt-nav__link-icon flaticon2-graph-1"></i>
-                <span className="kt-nav__link-text">Statistics</span>
+                <span className="kt-nav__link-text">Estadísticas</span>
               </a>
             </li>
             <li className="kt-nav__item">
               <a href="#" className="kt-nav__link">
                 <i className="kt-nav__link-icon flaticon2-calendar-4"></i>
-                <span className="kt-nav__link-text">Events</span>
+                <span className="kt-nav__link-text">Eventos</span>
               </a>
             </li>
             <li className="kt-nav__item">
               <a href="#" className="kt-nav__link">
                 <i className="kt-nav__link-icon flaticon2-layers-1"></i>
-                <span className="kt-nav__link-text">Reports</span>
+                <span className="kt-nav__link-text">Reportes</span>
               </a>
             </li>
             <li className="kt-nav__section">
-              <span className="kt-nav__section-text">Customers</span>
+              <span className="kt-nav__section-text">Clientes</span>
             </li>
             <li className="kt-nav__item">
               <a href="#" className="kt-nav__link">
                 <i className="kt-nav__link-icon flaticon2-calendar-4"></i>
-                <span className="kt-nav__link-text">Notifications</span>
+                <span className="kt-nav__link-text">Notificaciones</span>
               </a>
             </li>
             <li className="kt-nav__item">
               <a href="#" className="kt-nav__link">
                 <i className="kt-nav__link-icon flaticon2-file-1"></i>
-                <span className="kt-nav__link-text">Files</span>
+                <span className="kt-nav__link-text">Archivos</span>
               </a>
             </li>
           </ul>

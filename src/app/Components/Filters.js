@@ -17,7 +17,7 @@ const Filters = ({ filters, handleChangeFilters }) => {
         >
           {filters.bookingStatus !== ""
             ? filters.bookingStatus
-            : "Select Booking Status"}
+            : "Estado de reserva"}
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem
