@@ -72,13 +72,13 @@ const MyTrips = ({ userType = "admin" }) => {
                   ...events,
                   {
                     title: `${
-                      index === 0 ? "Going" : "Return"
-                    }-Departure From ${segment.departure.iataCode}`,
+                      index === 0 ? "Ida" : "Regreso"
+                    }-Partida desde ${segment.departure.iataCode}`,
                     start: new Date(segment?.departure?.at),
                     end: new Date(segment?.departure?.at)
                   },
                   {
-                    title: `${index === 0 ? "Going" : "Return"}-Arrival at ${
+                    title: `${index === 0 ? "Ida" : "Regreso"}-Arrivo a ${
                       segment.arrival.iataCode
                     }`,
                     start: new Date(segment?.arrival?.at),
@@ -139,7 +139,7 @@ const MyTrips = ({ userType = "admin" }) => {
     <div className="pb-5">
       <Portlet className="kt-portlet--height-fluid-half kt-portlet--border-bottom-brand">
         <PortletHeader
-          title="Trips"
+          title="Viajes"
           toolbar={
             <PortletHeaderToolbar>
               {userType === "user" && (
@@ -151,15 +151,15 @@ const MyTrips = ({ userType = "admin" }) => {
                     className="btn-bold btn-sm btn-label-brand border-0 mb-1 mb-sm-0 mr-3 text-capitalize"
                     caret
                   >
-                    {view} view
+                    Vista de {view}
                   </DropdownToggle>
                   <DropdownMenu>
                     <DropdownItem onClick={() => setView("details")}>
-                      Details View
+                      Vista de detalles
                     </DropdownItem>
 
                     <DropdownItem onClick={() => setView("calender")}>
-                      Calender View
+                      Vista de calendario
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>

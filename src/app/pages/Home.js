@@ -98,23 +98,23 @@ const Home = () => {
                 const errors = {};
 
                 if (!values.origin) {
-                  errors.origin = "Required!";
+                  errors.origin = "Requerido!";
                 }
                 if (!values.destination) {
-                  errors.destination = "Required!";
+                  errors.destination = "Requerido!";
                 }
                 if (!values.depart) {
-                  errors.depart = "Required!";
+                  errors.depart = "Requerido!";
                 }
                 if (!values.oneWay && !values.return) {
-                  errors.return = "Required!";
+                  errors.return = "Requerido!";
                 }
                 if (!values.adults && !values.child) {
-                  errors.adults = "Required!";
-                  errors.child = "Required!";
+                  errors.adults = "Requerido!";
+                  errors.child = "Requerido!";
                 }
                 if (!values.adults && values.child) {
-                  errors.child = "Adults are Required!";
+                  errors.child = "Los adultos son requeridos!";
                 }
                 return errors;
               }}
@@ -149,7 +149,7 @@ const Home = () => {
                 >
                   <div className="col-12 mb-3">
                     <Chip
-                      label="One Way"
+                      label="Solo ida"
                       onClick={() => setFieldValue("oneWay", !values.oneWay)}
                       onDelete={() => setFieldValue("oneWay", false)}
                       deleteIcon={values.oneWay ? <Done /> : <CloseOutlined />}
@@ -159,7 +159,7 @@ const Home = () => {
                       color="secondary"
                     />
                     <Chip
-                      label="Two Way"
+                      label="Ida y vuelta"
                       onClick={() => setFieldValue("oneWay", !values.oneWay)}
                       onDelete={() => setFieldValue("oneWay", true)}
                       deleteIcon={!values.oneWay ? <Done /> : <CloseOutlined />}
@@ -169,17 +169,17 @@ const Home = () => {
                     />
                   </div>
                   <div className={values.oneWay ? "col-3" : "col-2"}>
-                    <div>From</div>
+                    <div>Desde</div>
                     <InputAirports field={"origin"} />
                     {formErrorMessage(errors.origin)}
                   </div>
                   <div className={values.oneWay ? "col-3" : "col-2"}>
-                    <div>To</div>
+                    <div>Hasta</div>
                     <InputAirports field={"destination"} />
                     {formErrorMessage(errors.destination)}
                   </div>
                   <div className="col-2">
-                    <div>Depart</div>
+                    <div>Partida</div>
 
                     <Field
                       as={props => (
@@ -191,7 +191,7 @@ const Home = () => {
                           {...props}
                         />
                       )}
-                      placeholder="Depart Date"
+                      placeholder="Fecha de partida"
                       name="depart"
                       min={moment(new Date()).format("YYYY-MM-DD")}
                     />
@@ -199,7 +199,7 @@ const Home = () => {
                   </div>
                   {!values.oneWay && (
                     <div className="col-2">
-                      <div>Return</div>
+                      <div>Retorno</div>
                       <Field
                         as={props => (
                           <input
@@ -210,7 +210,7 @@ const Home = () => {
                             {...props}
                           />
                         )}
-                        placeholder="Depart Date"
+                        placeholder="Fecha de retorno"
                         name="return"
                         min={moment(values.depart || new Date()).format(
                           "YYYY-MM-DD"
@@ -221,9 +221,9 @@ const Home = () => {
                   )}
 
                   <div className="col-2">
-                    <div>Adults</div>
+                    <div>Adultos</div>
                     <Field className="form-control" name="adults" as="select">
-                      <option value="">Select</option>
+                      <option value="">Seleccionar</option>
                       {[...Array(9).keys()].map(v => (
                         <option
                           value={v + 1}
@@ -242,9 +242,9 @@ const Home = () => {
                     {formErrorMessage(errors.adults)}
                   </div>
                   <div className="col-2">
-                    <div>Child</div>
+                    <div>Niños</div>
                     <Field className="form-control" name="child" as="select">
-                      <option value="">Select</option>
+                      <option value="">Seleccionar</option>
                       {[...Array(9).keys()].map(v => (
                         <option
                           value={v + 1}
@@ -273,7 +273,7 @@ const Home = () => {
                       style={loadingButtonStyle}
                       type={"submit"}
                     >
-                      <i className="fa fa-search" /> Find Offers
+                      <i className="fa fa-search" /> Encontrar ofertas
                     </button>
                   </div>
                 </Form>
@@ -310,11 +310,11 @@ const Home = () => {
               }}
             >
               <div className="row">
-                <h4 className="mb-3 col-12">Flights</h4>
-                <div className="col-3 font-weight-bold mb-4">Airline</div>
-                <div className="col-3 font-weight-bold mb-4">Departure</div>
-                <div className="col-3 font-weight-bold mb-4">Arrival</div>
-                <div className="col-3 font-weight-bold mb-4">Duration</div>
+                <h4 className="mb-3 col-12">Vuelos</h4>
+                <div className="col-3 font-weight-bold mb-4">Aerolínea</div>
+                <div className="col-3 font-weight-bold mb-4">Partida</div>
+                <div className="col-3 font-weight-bold mb-4">Llegada</div>
+                <div className="col-3 font-weight-bold mb-4">Duración</div>
               </div>
 
               <FlightList
@@ -333,7 +333,7 @@ const Home = () => {
               borderRadius: "4px"
             }}
           >
-            <h4 className="mb-3">Recommended Locations</h4>
+            <h4 className="mb-3">Destinos recomendados</h4>
             {recommendedLoading ? (
               <div
                 className="d-flex align-items-center justify-content-center"

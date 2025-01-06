@@ -93,19 +93,19 @@ const Blogs = () => {
                     <DropdownItem
                       onClick={() => setFilters({ ...filters, blogs: false })}
                     >
-                      All Blogs
+                      Todos los Blogs
                     </DropdownItem>
                     <DropdownItem
                       onClick={() => setFilters({ ...filters, blogs: true })}
                     >
-                      My Blogs
+                      Mis Blogs
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
               )}
               {user?.role === "1" && (
                 <Link to="/blogs/create" className="btn btn-label btn-sm">
-                  <i className="fa fa-plus" /> Add New Blog
+                  <i className="fa fa-plus" /> Agrega un nuevo Blog
                 </Link>
               )}
             </PortletHeaderToolbar>
@@ -124,7 +124,7 @@ const Blogs = () => {
               className="d-flex justify-content-center align-items-center"
               style={{ height: 100, fontSize: 20 }}
             >
-              No Blogs Found!
+              No se encontraron blogs!
             </div>
           ) : (
             <div className="d-flex flex-column align-items-center  justify-content-center">
