@@ -27,7 +27,7 @@ const FaQsSubHeader = () => {
           <div className="kt-subheader__wrapper">
             <button onChange={() => history.goBack()} className="btn btn-danger btn-lg btn-font-sm">
               <i className='fa fa-arrow-left'/>
-              Back
+              Atrás
             </button>
           </div>
         </div>

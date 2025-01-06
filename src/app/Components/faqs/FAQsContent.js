@@ -11,7 +11,7 @@ const FaQsContent = () => {
         <div className="kt-portlet__head">
           <div className="kt-portlet__head-label">
             <h3 className="kt-portlet__head-title">
-              FAQ Example
+              Preguntas frecuentes
             </h3>
           </div>
         </div>
@@ -23,7 +23,7 @@ const FaQsContent = () => {
                 <div className="card">
                   <div className="card-header">
                     <div className={`card-title ${!firstCollapse && 'collapsed'}`} onClick={() => setFirstCollapse(!firstCollapse)}>
-                      Updates and bug fixes are included in the cost of ALL items.
+                      Los compradores que compraron antes de la nueva política de soporte de artículos.
                     </div>
                   </div>
                     <Collapse isOpen={firstCollapse} >

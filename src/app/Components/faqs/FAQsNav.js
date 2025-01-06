@@ -15,19 +15,19 @@ const FaQsNav = () => {
               <li className="kt-nav__item">
                 <span className="kt-nav__link">
                   <span className="kt-nav__link-bullet kt-nav__link-bullet--line"/>
-                  <span className="kt-nav__link-text">New</span>
+                  <span className="kt-nav__link-text">Nuevo</span>
                 </span>
               </li>
               <li className="kt-nav__item">
                 <span className="kt-nav__link">
                   <span className="kt-nav__link-bullet kt-nav__link-bullet--line"/>
-                  <span className="kt-nav__link-text">Pending</span>
+                  <span className="kt-nav__link-text">Pendiente</span>
                 </span>
               </li>
               <li className="kt-nav__item">
                 <span className="kt-nav__link">
                   <span className="kt-nav__link-bullet kt-nav__link-bullet--line"/>
-                  <span className="kt-nav__link-text">Replied</span>
+                  <span className="kt-nav__link-text">Respondido</span>
                 </span>
               </li>
             </ul>
