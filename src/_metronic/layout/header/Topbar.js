@@ -17,7 +17,7 @@ const Topbar = () => {
       ) : (
         <div className="d-flex align-items-center">
           <NavLink to="/auth/login" className="btn btn-outline-success ml-3">
-            Login or Sign Up
+            Inicia sesión o registro
           </NavLink>
         </div>
       )}

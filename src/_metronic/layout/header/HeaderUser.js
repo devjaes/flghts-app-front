@@ -28,7 +28,7 @@ const HeaderUser = () => {
               My Trips
             </NavLink>
           )}
-          <NavLink
+          {/* <NavLink
             to="/world-tour"
             activeClassName={"active"}
             className="zzzzzzz ml-2"
@@ -48,7 +48,7 @@ const HeaderUser = () => {
             className="zzzzzzz ml-2"
           >
             Blogs
-          </NavLink>
+          </NavLink> */}
         </div>
       </div>
       <Topbar />

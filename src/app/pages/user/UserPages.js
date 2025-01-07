@@ -43,7 +43,7 @@ const UserPages = () => {
             </UserLayout>
           )}
         />
-        <Route
+        {/* <Route
           path="/world-tour"
           component={() => (
             <UserLayout>
@@ -128,7 +128,7 @@ const UserPages = () => {
               </KtContent>
             </UserLayout>
           )}
-        />
+        /> */}
         <UserRoute
           path="/account"
           component={() => (

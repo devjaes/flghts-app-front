@@ -28,7 +28,7 @@ function UserProfile(props) {
           >
             <div className="kt-header__topbar-user">
               <span className="kt-header__topbar-welcome kt-hidden-mobile">
-                Hi,
+                Hola,
               </span>
               <span className="kt-header__topbar-username kt-hidden-mobile">
                 {user.firstName}
