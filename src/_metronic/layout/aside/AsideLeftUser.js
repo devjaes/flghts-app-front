@@ -10,25 +10,25 @@ const AsideLeftUser = ({open, setOpen}) => {
         <NavLink to="/jobs/list" activeClassName='kt-menu__item--active' className="kt-menu__item">
           <ListItem className='kt-menu__link w-100'>
             <i className='kt-menu__link-icon fa fa-chart-bar'/>
-            <span className="kt-menu__link-text">Jobs List</span>
+            <span className="kt-menu__link-text">Lista de trabajos</span>
           </ListItem>
         </NavLink>
         <NavLink to="/jobs/applied" activeClassName='kt-menu__item--active' className="kt-menu__item">
           <ListItem className="kt-menu__link w-100" >
             <i className='kt-menu__link-icon fa fa-briefcase'/>
-            <span className="kt-menu__link-text">Jobs Applied</span>
+            <span className="kt-menu__link-text">Trabajos aplicados</span>
           </ListItem>
         </NavLink>
         <NavLink to="/interviews" activeClassName='kt-menu__item--active' className="kt-menu__item">
           <ListItem className="kt-menu__link w-100" >
             <i className='kt-menu__link-icon fa fa-handshake'/>
-            <span className="kt-menu__link-text">Interviews</span>
+            <span className="kt-menu__link-text">Entrevistas</span>
           </ListItem>
         </NavLink>
         <NavLink to="/tests" activeClassName='kt-menu__item--active' className="kt-menu__item">
           <ListItem className="kt-menu__link w-100" >
             <i className='kt-menu__link-icon fa fa-check-double'/>
-            <span className="kt-menu__link-text">Tests</span>
+            <span className="kt-menu__link-text">Pruebas</span>
           </ListItem>
         </NavLink>
       </List>

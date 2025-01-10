@@ -5,14 +5,14 @@ import { formErrorMessage } from "../../../pages/errors/FormErrorMessage";
 
 const RegistrationWizardFormPInfo = ({ errors }) => {
   return (
-    <RegistrationWizardContent title="Setup Your Personal Information">
+    <RegistrationWizardContent title="Proporciona tu información personal">
       <div className="form-group">
         <label>Nombre*</label>
         {formErrorMessage(errors.firstName)}
         <Field
           className="form-control"
           name="firstName"
-          placeholder="First Name"
+          placeholder="Nombre"
           required
         />
         <span className="form-text text-muted">
@@ -20,12 +20,12 @@ const RegistrationWizardFormPInfo = ({ errors }) => {
         </span>
       </div>
       <div className="form-group">
-        <label>Last Name*</label>
+        <label>Apellido*</label>
         {formErrorMessage(errors.lastName)}
         <Field
           className="form-control"
           name="lastName"
-          placeholder="Last Name"
+          placeholder="Apellido"
           required
         />
         <span className="form-text text-muted">

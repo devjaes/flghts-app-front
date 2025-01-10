@@ -28,28 +28,26 @@ class Footer extends React.Component {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="kt-footer__section">
-                    <h3 className="kt-footer__title">About</h3>
+                    <h3 className="kt-footer__title">Sobre</h3>
                     <div className="kt-footer__content">
-                      Whatever method you chosse,these nine will make you
-                      re-think theway you craft healines Why? Because they all
-                      have points in that are worth from a point of view.
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-4">
                   <div className="kt-footer__section">
-                    <h3 className="kt-footer__title">Quick Links</h3>
+                    <h3 className="kt-footer__title">Accesos Rápidos</h3>
                     <div className="kt-footer__content">
                       <div className="kt-footer__nav">
                         <div className="kt-footer__nav-section">
-                          <a href="#">General Reports</a>
-                          <a href="#">Dashboart Widgets</a>
+                          <a href="#">Reportes Generales</a>
+                          <a href="#">Widgets del Dashboard</a>
                           <a href="#">Custom Pages</a>
                         </div>
                         <div className="kt-footer__nav-section">
-                          <a href="#">User Setting</a>
-                          <a href="#">Custom Pages</a>
-                          <a href="#">Intranet Settings</a>
+                          <a href="#">Ajustes de usuario</a>
+                          <a href="#">Páginas personalizadas</a>
+                          <a href="#">Configuración de intranet</a>
                         </div>
                       </div>
                     </div>
@@ -57,7 +55,7 @@ class Footer extends React.Component {
                 </div>
                 <div className="col-lg-4">
                   <div className="kt-footer__section">
-                    <h3 className="kt-footer__title">Get In Touch</h3>
+                    <h3 className="kt-footer__title">Contáctate</h3>
                     <div className="kt-footer__content">
                       <form action="" className="kt-footer__subscribe">
                         <div className="input-group">
@@ -68,7 +66,7 @@ class Footer extends React.Component {
                           />
                           <div className="input-group-append">
                             <button className="btn btn-brand" type="button">
-                              Join
+                              Únete
                             </button>
                           </div>
                         </div>
@@ -100,13 +98,13 @@ class Footer extends React.Component {
               </div>
               <div className="kt-footer__menu">
                 <a href="http://keenthemes.com/metronic" target="_blank">
-                  Purchase License
+                  Comprar licencia
                 </a>
                 <a href="http://keenthemes.com/metronic" target="_blank">
-                  Team
+                  Equipo
                 </a>
                 <a href="http://keenthemes.com/metronic" target="_blank">
-                  Contact
+                  Contacto
                 </a>
               </div>
             </div>

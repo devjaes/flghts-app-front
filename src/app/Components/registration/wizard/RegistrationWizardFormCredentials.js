@@ -4,7 +4,7 @@ import {Field} from "formik";
 import {formErrorMessage} from "../../../pages/errors/FormErrorMessage";
 const RegistrationWizardFormCredentials = ({errors}) => {
   return (
-    <RegistrationWizardContent title='Add Credentials'>
+    <RegistrationWizardContent title='Agrega tus credenciales'>
       <div className="form-group">
         <label>Correo electrónico*</label>
         {formErrorMessage(errors.email)}

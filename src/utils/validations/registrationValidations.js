@@ -39,7 +39,7 @@ export const validateRegistration = (values, current) => {
   }
   if (current === 0 && values.mobileNo.trim() === "") {
     errors.mobileNo = "Número de teléfono es requerido!";
-  } else if (current === 0 && !values.mobileNo.match(/^[0-9]{11}$/)) {
+  } else if (current === 0 && !values.mobileNo.match(/^[0-9]{10}$/)) {
     errors.mobileNo = "Número de teléfono inválido!";
   }
   if (current === 1 && values.email.trim() === "") {

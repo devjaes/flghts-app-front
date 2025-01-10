@@ -169,7 +169,7 @@ const Blogs = () => {
                           to={`/blogs/details/${blog._id}`}
                           className="btn btn-link"
                         >
-                          View Details
+                          Ver detalles
                         </Link>
                       </div>
                     </div>

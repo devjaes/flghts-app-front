@@ -70,10 +70,10 @@ function UserProfile(props) {
               </div>
               <div className="kt-notification__item-details">
                 <div className="kt-notification__item-title kt-font-bold">
-                  My Profile
+                  Mi perfil
                 </div>
                 <div className="kt-notification__item-time">
-                  Account settings and more
+                  Configruación de cuenta y más
                 </div>
               </div>
             </Link>
@@ -82,7 +82,7 @@ function UserProfile(props) {
                 to="/logout"
                 className="btn btn-label-brand btn-sm btn-bold"
               >
-                Sign Out
+                Cerrar sesión
               </Link>
             </div>
           </div>

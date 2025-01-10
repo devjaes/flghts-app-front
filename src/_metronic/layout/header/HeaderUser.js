@@ -25,7 +25,7 @@ const HeaderUser = () => {
               activeClassName={"active"}
               className="zzzzzzz ml-5"
             >
-              My Trips
+              Mis viajes
             </NavLink>
           )}
           {/* <NavLink

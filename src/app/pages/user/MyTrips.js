@@ -22,6 +22,22 @@ import {
   DropdownToggle
 } from "reactstrap";
 const localizer = momentLocalizer(moment);
+
+export const translateStatus = status => {
+  switch (status) {
+    case "Pending":
+      return "Pendiente";
+    case "Canceled":
+      return "Cancelado";
+    case "Confirmed":
+      return "Confirmado";
+    case "Approved":
+      return "Aprobado";
+    default:
+      return status;
+  }
+};
+
 const MyTrips = ({ userType = "admin" }) => {
   const { user } = useSelector(({ auth: { user } }) => ({
     user
@@ -114,12 +130,13 @@ const MyTrips = ({ userType = "admin" }) => {
       }
     });
   };
+
   const updateTipsCancel = (tripId, status) => {
     const newTrips = trips.map(trip => {
       if (trip._id === tripId) {
         return {
           ...trip,
-          bookingStatus: status
+          bookingStatus: status 
         };
       } else {
         return trip;
@@ -193,10 +210,10 @@ const MyTrips = ({ userType = "admin" }) => {
           ) : view === "details" ? (
             <React.Fragment>
               <div className="row">
-                <div className="col-3 font-weight-bold mb-4">Airline</div>
-                <div className="col-3 font-weight-bold mb-4">Departure</div>
-                <div className="col-3 font-weight-bold mb-4">Arrival</div>
-                <div className="col-3 font-weight-bold mb-4">Duration</div>
+                <div className="col-3 font-weight-bold mb-4">Aerolinea</div>
+                <div className="col-3 font-weight-bold mb-4">Partida</div>
+                <div className="col-3 font-weight-bold mb-4">Retorno</div>
+                <div className="col-3 font-weight-bold mb-4">Duración</div>
               </div>
               <FlightList
                 flights={filteredData
@@ -209,7 +226,7 @@ const MyTrips = ({ userType = "admin" }) => {
                   .map(trip => trip)}
                 readOnly={true}
                 bookingStatuses={filteredData.map(trip => ({
-                  bookingStatus: trip.bookingStatus,
+                  bookingStatus: translateStatus(trip.bookingStatus),
                   _id: trip._id
                 }))}
                 setResponse={setResponse}

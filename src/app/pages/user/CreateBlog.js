@@ -159,7 +159,7 @@ const CreateBlog = ({ edit }) => {
                 <Form onSubmit={handleSubmit} className="w-100">
                   {console.log(values)}
                   <div className="form-group row">
-                    <label className="col-2 col-form-label">Blog Title</label>
+                    <label className="col-2 col-form-label">Título del blog</label>
                     <div className="col-10">
                       <Field
                         className="form-control"
@@ -171,7 +171,7 @@ const CreateBlog = ({ edit }) => {
                   </div>
                   <div className="form-group row">
                     <label className="col-2 col-form-label">
-                      Blog Description
+                      Descripción del blog
                     </label>
                     <div className="col-10">
                       <CKEditor
@@ -205,7 +205,7 @@ const CreateBlog = ({ edit }) => {
                     </div>
                   </div>
                   <div className="form-group row">
-                    <label className="col-2 col-form-label">Images</label>
+                    <label className="col-2 col-form-label">Imágenes</label>
                     <div className="col-10">
                       <div>
                         <Dropzone
@@ -229,11 +229,11 @@ const CreateBlog = ({ edit }) => {
                                 >
                                   <input {...getInputProps()} />
                                   {isDragActive ? (
-                                    <span>Drop the files here ...</span>
+                                    <span>Suelta los archivos aquí ...</span>
                                   ) : (
                                     <span>
-                                      Drag 'n' drop images here, or click to
-                                      select files
+                                      Arrastra y suelta tus imágenes aquí, o
+                                      haz clic para seleccionar archivos
                                     </span>
                                   )}
                                 </div>

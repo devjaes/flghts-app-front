@@ -191,7 +191,7 @@ const Home = () => {
                           {...props}
                         />
                       )}
-                      placeholder="Fecha de partida"
+                      placeholder="Partida"
                       name="depart"
                       min={moment(new Date()).format("YYYY-MM-DD")}
                     />
@@ -210,7 +210,7 @@ const Home = () => {
                             {...props}
                           />
                         )}
-                        placeholder="Fecha de retorno"
+                        placeholder="Retorno"
                         name="return"
                         min={moment(values.depart || new Date()).format(
                           "YYYY-MM-DD"

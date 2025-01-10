@@ -6,7 +6,7 @@ import InputCountry from "../../input/InputCountry";
 const RegistrationWirzardFormAddress = ({errors}) => {
 
   return (
-    <RegistrationWizardContent title="Enter Your Location">
+    <RegistrationWizardContent title="Ingresa tu dirección">
       <div className="form-group">
         <label>Direccion*</label>
         {formErrorMessage(errors.address)}

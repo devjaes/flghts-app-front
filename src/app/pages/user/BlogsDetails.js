@@ -116,13 +116,13 @@ const BlogDetails = () => {
                     to={`/blogs/edit/${details?._id}`}
                     className="btn btn-sm btn-label mx-2"
                   >
-                    Edit Blog
+                    Editar Blog
                   </Link>
                   <button
                     className="btn btn-sm btn-danger"
                     onClick={() => setDeleteConfirm(true)}
                   >
-                    Delete Blog
+                    Eliminar Blog
                   </button>
                 </>
               )}
@@ -185,9 +185,9 @@ const BlogDetails = () => {
       </Portlet>
       <Modal show={deleteConfirm} onHide={() => setDeleteConfirm(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Confirm</Modal.Title>
+          <Modal.Title>Confirmar</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Are you sure you want to delete this blog?</Modal.Body>
+        <Modal.Body>Estás seguro de que quiere eliminar este blog?</Modal.Body>
         <Modal.Footer>
           <button
             className="btn btn-danger btn-outlined"

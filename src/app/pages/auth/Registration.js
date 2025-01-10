@@ -72,7 +72,7 @@ function Registration({ intl }) {
                       setStatus(
                         intl.formatMessage({
                           id: "AUTH.VALIDATION.REGISTRATION_SUCCESS",
-                          defaultMessage: "Successfully Registered!"
+                          defaultMessage: "Registrado exitosamente!"
                         })
                       );
                       setTimeout(() => {
@@ -87,7 +87,7 @@ function Registration({ intl }) {
                     setStatus(
                       intl.formatMessage({
                         id: "AUTH.VALIDATION.INVALID_REGISTRATION",
-                        defaultMessage: "Something Went Wrong!"
+                        defaultMessage: "Algo salió mal!"
                       })
                     );
                   });

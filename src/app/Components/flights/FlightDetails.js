@@ -205,12 +205,12 @@ const FlightDetails = ({
             <tbody>
               {flight?.details?.itineraries.map((itinerary, index) =>
                 itinerary.segments.map((segment, i) => (
-                  <tr key={`${index}-itineraries`}>
+                  <tr key={`itinerarios-${index}`}>
                     <td>
                       {index === 0 && i === 0
-                        ? "Depart"
+                        ? "Partida"
                         : i === 0
-                        ? "Return"
+                        ? "Retorno"
                         : ""}
                     </td>
                     <td>
@@ -361,7 +361,7 @@ const FlightDetails = ({
                       "kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light": loadingBooking,
                     }
                   )}`}
-                  disabled={bookingStatus?.bookingStatus !== "Approved"}
+                  disabled={bookingStatus?.bookingStatus !== "Aprobado"}
                   style={loadingButtonStyle}
                   // onClick={() => handleClickChangeStatus("Canceled")}
                 >
@@ -376,7 +376,7 @@ const FlightDetails = ({
                   "kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light": loadingBooking,
                 }
               )}`}
-              disabled={bookingStatus?.bookingStatus !== "Pending"}
+              disabled={bookingStatus?.bookingStatus !== "Pendiente"}
               style={loadingButtonStyle}
               onClick={() => handleClickChangeStatus("Approved")}
             >

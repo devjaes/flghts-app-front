@@ -40,27 +40,29 @@ const FaQsNav = () => {
         </li>
         <li className="kt-nav__item">
           <span className="kt-nav__link">
-            <span className="kt-nav__link-text">Delivery & Shipping</span>
+            <span className="kt-nav__link-text">
+            Entrega y envío
+            </span>
           </span>
         </li>
         <li className="kt-nav__item">
           <span className="kt-nav__link">
-            <span className="kt-nav__link-text">Customer Support</span>
+            <span className="kt-nav__link-text">Asistencia al cliente</span>
           </span>
         </li>
         <li className="kt-nav__item">
           <span className="kt-nav__link">
-            <span className="kt-nav__link-text">Payment Methods</span>
+            <span className="kt-nav__link-text">Métodos de pago</span>
           </span>
         </li>
         <li className="kt-nav__item">
           <span className="kt-nav__link">
-            <span className="kt-nav__link-text">Delivery Rules</span>
+            <span className="kt-nav__link-text">Reglas de entrega</span>
           </span>
         </li>
         <li className="kt-nav__item">
           <span className="kt-nav__link">
-            <span className="kt-nav__link-text">Refund Policy</span>
+            <span className="kt-nav__link-text">Política de reembolso</span>
           </span>
         </li>
       </ul>

@@ -19,7 +19,7 @@ export default class ExportContextMenu extends React.Component {
             this.setState({ anchor: event.target });
           }}
         >
-          Export
+          Exportar
         </button>
 
         <Popover
@@ -40,31 +40,31 @@ export default class ExportContextMenu extends React.Component {
             <li className="kt-nav__item">
               <a className="kt-nav__link">
                 <i className="kt-nav__link-icon flaticon2-graph-1" />
-                <span className="kt-nav__link-text">Export</span>
+                <span className="kt-nav__link-text">Exportar</span>
               </a>
             </li>
             <li className="kt-nav__item">
               <a className="kt-nav__link">
                 <i className="kt-nav__link-icon flaticon2-calendar-4" />
-                <span className="kt-nav__link-text">Save</span>
+                <span className="kt-nav__link-text">Guardar</span>
               </a>
             </li>
             <li className="kt-nav__item">
               <a className="kt-nav__link">
                 <i className="kt-nav__link-icon flaticon2-layers-1" />
-                <span className="kt-nav__link-text">Import</span>
+                <span className="kt-nav__link-text">Importar</span>
               </a>
             </li>
             <li className="kt-nav__item">
               <a className="kt-nav__link">
                 <i className="kt-nav__link-icon flaticon2-calendar-4" />
-                <span className="kt-nav__link-text">Update</span>
+                <span className="kt-nav__link-text">Actualizar</span>
               </a>
             </li>
             <li className="kt-nav__item">
               <a className="kt-nav__link">
                 <i className="kt-nav__link-icon flaticon2-file-1" />
-                <span className="kt-nav__link-text">Customize</span>
+                <span className="kt-nav__link-text">Personalizar</span>
               </a>
             </li>
           </ul>

@@ -26,18 +26,18 @@ function AsideLeftAdmin({ open, setOpen }) {
         >
           <ListItem className="kt-menu__link w-100">
             <i className="kt-menu__link-icon fa fa-plane" />
-            <span className="kt-menu__link-text">Flights</span>
+            <span className="kt-menu__link-text">Vuelos</span>
           </ListItem>
         </NavLink>
 
-        <NavLink
+        {/* <NavLink
           to="/world-tour"
           activeClassName="kt-menu__item--active"
           className="kt-menu__item"
         >
           <ListItem className="kt-menu__link w-100">
             <i className="kt-menu__link-icon fa fa fa-plane" />
-            <span className="kt-menu__link-text">World Tour</span>
+            <span className="kt-menu__link-text">Gira Mundial</span>
           </ListItem>
         </NavLink>
         <NavLink
@@ -47,9 +47,9 @@ function AsideLeftAdmin({ open, setOpen }) {
         >
           <ListItem className="kt-menu__link w-100">
             <i className="kt-menu__link-icon fa fa fa-plane" />
-            <span className="kt-menu__link-text">Umrah Deals</span>
+            <span className="kt-menu__link-text">Delas de umbrah</span>
           </ListItem>
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="/admins"
           activeClassName="kt-menu__item--active"
